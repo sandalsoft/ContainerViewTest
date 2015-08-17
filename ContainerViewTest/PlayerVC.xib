@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8173.3" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8142"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="System San Francisco Display Regular.ttf">
+            <string>.HelveticaNeueDeskInterface-Regular</string>
+            <string>.HelveticaNeueDeskInterface-Regular</string>
+            <string>.HelveticaNeueDeskInterface-Regular</string>
+            <string>.HelveticaNeueDeskInterface-Regular</string>
+            <string>.HelveticaNeueDeskInterface-Regular</string>
+            <string>.HelveticaNeueDeskInterface-Regular</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PlayerVC" customModule="ContainerViewTest" customModuleProvider="target">
+            <connections>
+                <outlet property="topPlayerView" destination="pDN-PK-VcY" id="sjF-fK-JVG"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pDN-PK-VcY" userLabel="TopPlayerView">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="85"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Econtalk - Epispde 153:  Federal Reserve Miscues on Stimulus (8/06/2015)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZrZ-bT-vQL">
+                            <rect key="frame" x="66" y="5" width="468" height="16.5"/>
+                            <fontDescription key="fontDescription" name=".HelveticaNeueDeskInterface-Regular" family="San Francisco Display" pointSize="14"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="Fit-qP-Gb6">
+                            <rect key="frame" x="0.0" y="57" width="600" height="30"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Nm-J4-zhu">
+                                    <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                    <state key="normal" title="&lt;&lt;"/>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="urc-ZD-Ey5">
+                                    <rect key="frame" x="285" y="0.0" width="30" height="30"/>
+                                    <state key="normal" title="|&gt;"/>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8CP-Xu-p26">
+                                    <rect key="frame" x="570" y="0.0" width="30" height="30"/>
+                                    <state key="normal" title="&gt;&gt;"/>
+                                </button>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="0y5-kg-0zn">
+                            <rect key="frame" x="0.0" y="32" width="600" height="17"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0:00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3DL-LU-lek">
+                                    <rect key="frame" x="0.0" y="0.0" width="27.5" height="17"/>
+                                    <fontDescription key="fontDescription" name=".HelveticaNeueDeskInterface-Regular" family="San Francisco Display" pointSize="14"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="-00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H6s-pJ-HOV">
+                                    <rect key="frame" x="559.5" y="0.0" width="40.5" height="17"/>
+                                    <fontDescription key="fontDescription" name=".HelveticaNeueDeskInterface-Regular" family="San Francisco Display" pointSize="14"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <gestureRecognizers/>
+                    <constraints>
+                        <constraint firstItem="0y5-kg-0zn" firstAttribute="centerX" secondItem="pDN-PK-VcY" secondAttribute="centerX" id="26x-zR-1sB"/>
+                        <constraint firstItem="0y5-kg-0zn" firstAttribute="centerX" secondItem="ZrZ-bT-vQL" secondAttribute="centerX" id="3Bw-qX-fyf"/>
+                        <constraint firstAttribute="trailing" secondItem="Fit-qP-Gb6" secondAttribute="trailing" id="AbZ-pQ-o8r"/>
+                        <constraint firstAttribute="trailing" secondItem="0y5-kg-0zn" secondAttribute="trailing" id="Dvg-1f-f0y"/>
+                        <constraint firstAttribute="bottom" secondItem="0y5-kg-0zn" secondAttribute="bottom" constant="36" id="Fa9-5I-tLc"/>
+                        <constraint firstItem="0y5-kg-0zn" firstAttribute="top" secondItem="ZrZ-bT-vQL" secondAttribute="bottom" constant="10" id="Gga-ht-pba"/>
+                        <constraint firstItem="Fit-qP-Gb6" firstAttribute="centerX" secondItem="pDN-PK-VcY" secondAttribute="centerX" id="QB3-TT-tXQ"/>
+                        <constraint firstItem="0y5-kg-0zn" firstAttribute="top" secondItem="pDN-PK-VcY" secondAttribute="top" constant="32" id="Sbn-Cg-z3f"/>
+                        <constraint firstItem="Fit-qP-Gb6" firstAttribute="centerX" secondItem="ZrZ-bT-vQL" secondAttribute="centerX" id="Ylk-Pk-xjb"/>
+                        <constraint firstAttribute="bottom" secondItem="Fit-qP-Gb6" secondAttribute="bottom" constant="-2" id="csk-W5-rw9"/>
+                        <constraint firstItem="Fit-qP-Gb6" firstAttribute="leading" secondItem="pDN-PK-VcY" secondAttribute="leading" id="d9E-Fg-66F"/>
+                        <constraint firstItem="0y5-kg-0zn" firstAttribute="leading" secondItem="pDN-PK-VcY" secondAttribute="leading" constant="133" id="lyp-d9-Rmu"/>
+                        <constraint firstItem="0y5-kg-0zn" firstAttribute="leading" secondItem="pDN-PK-VcY" secondAttribute="leading" id="mM5-qT-sOa"/>
+                        <constraint firstAttribute="height" constant="85" id="olM-Kw-Dbi"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="lyp-d9-Rmu"/>
+                        </mask>
+                    </variation>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="ljZ-41-HlD" appends="YES" id="CQg-07-MXd"/>
+                    </connections>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RV7-IA-m93" userLabel="BottomPlayerView">
+                    <rect key="frame" x="0.0" y="515" width="600" height="85"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Econtalk - Epispde 153:  Federal Reserve Miscues on Stimulus (8/06/2015)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BYN-RT-b5F">
+                            <rect key="frame" x="0.0" y="1" width="600" height="16.5"/>
+                            <fontDescription key="fontDescription" name=".HelveticaNeueDeskInterface-Regular" family="San Francisco Display" pointSize="14"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="vcv-GZ-rWO">
+                            <rect key="frame" x="0.0" y="50" width="600" height="34.5"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iix-8G-W9W">
+                                    <rect key="frame" x="0.0" y="2.5" width="30" height="30"/>
+                                    <state key="normal" title="&lt;&lt;"/>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UES-OH-HFo">
+                                    <rect key="frame" x="285" y="2.5" width="30" height="30"/>
+                                    <state key="normal" title="|&gt;"/>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fti-OB-JAG">
+                                    <rect key="frame" x="570" y="2.5" width="30" height="30"/>
+                                    <state key="normal" title="&gt;&gt;"/>
+                                </button>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="neE-ep-AUW">
+                            <rect key="frame" x="0.0" y="29" width="600" height="16.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1:36" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jdG-jc-x4J">
+                                    <rect key="frame" x="0.0" y="0.0" width="27.5" height="16.5"/>
+                                    <fontDescription key="fontDescription" name=".HelveticaNeueDeskInterface-Regular" family="San Francisco Display" pointSize="14"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="-48:09" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vKY-1q-uIG">
+                                    <rect key="frame" x="559.5" y="0.0" width="40.5" height="16.5"/>
+                                    <fontDescription key="fontDescription" name=".HelveticaNeueDeskInterface-Regular" family="San Francisco Display" pointSize="14"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="neE-ep-AUW" firstAttribute="top" secondItem="BYN-RT-b5F" secondAttribute="bottom" constant="12" id="3HX-nb-y83"/>
+                        <constraint firstItem="vcv-GZ-rWO" firstAttribute="leading" secondItem="RV7-IA-m93" secondAttribute="leading" id="7gp-XL-2n3"/>
+                        <constraint firstItem="BYN-RT-b5F" firstAttribute="top" secondItem="RV7-IA-m93" secondAttribute="top" constant="1" id="BVL-C6-NXO"/>
+                        <constraint firstAttribute="bottom" secondItem="vcv-GZ-rWO" secondAttribute="bottom" id="DYg-cb-8bw"/>
+                        <constraint firstItem="neE-ep-AUW" firstAttribute="leading" secondItem="RV7-IA-m93" secondAttribute="leading" id="E8R-nT-TXQ"/>
+                        <constraint firstItem="neE-ep-AUW" firstAttribute="leading" secondItem="RV7-IA-m93" secondAttribute="leading" id="GS2-QH-oUC"/>
+                        <constraint firstAttribute="trailing" secondItem="neE-ep-AUW" secondAttribute="trailing" id="Lh5-RW-V9q"/>
+                        <constraint firstItem="vcv-GZ-rWO" firstAttribute="leading" secondItem="RV7-IA-m93" secondAttribute="leading" id="Mf5-EP-xfJ"/>
+                        <constraint firstAttribute="trailing" secondItem="vcv-GZ-rWO" secondAttribute="trailing" constant="255" id="doH-Ng-umD"/>
+                        <constraint firstAttribute="height" constant="85" id="k60-Yt-nzB"/>
+                        <constraint firstItem="vcv-GZ-rWO" firstAttribute="top" secondItem="neE-ep-AUW" secondAttribute="bottom" constant="4.5" id="ld3-Wx-4jH"/>
+                        <constraint firstItem="BYN-RT-b5F" firstAttribute="leading" secondItem="RV7-IA-m93" secondAttribute="leading" id="oWV-xX-0Nl"/>
+                        <constraint firstAttribute="trailing" secondItem="vcv-GZ-rWO" secondAttribute="trailing" id="pFa-UA-PS8"/>
+                        <constraint firstAttribute="trailing" secondItem="BYN-RT-b5F" secondAttribute="trailing" id="x1b-ty-Wz3"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="7gp-XL-2n3"/>
+                            <exclude reference="doH-Ng-umD"/>
+                        </mask>
+                    </variation>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="podcast" translatesAutoresizingMaskIntoConstraints="NO" id="iVs-nU-5NJ">
+                    <rect key="frame" x="175" y="175" width="250" height="250"/>
+                </imageView>
+            </subviews>
+            <gestureRecognizers/>
+            <constraints>
+                <constraint firstItem="iVs-nU-5NJ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Bkw-e0-l9l"/>
+                <constraint firstItem="iVs-nU-5NJ" firstAttribute="top" secondItem="pDN-PK-VcY" secondAttribute="bottom" id="BuD-xz-wEL"/>
+                <constraint firstAttribute="bottom" secondItem="RV7-IA-m93" secondAttribute="bottom" id="DSd-3W-VD6"/>
+                <constraint firstItem="RV7-IA-m93" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Ef8-m5-JKF"/>
+                <constraint firstItem="pDN-PK-VcY" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="FLI-6k-Whv"/>
+                <constraint firstAttribute="trailing" secondItem="iVs-nU-5NJ" secondAttribute="trailing" id="L6Q-24-nnC"/>
+                <constraint firstItem="pDN-PK-VcY" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="NB5-PS-aav"/>
+                <constraint firstItem="RV7-IA-m93" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Xcf-HK-nrE"/>
+                <constraint firstAttribute="trailing" secondItem="RV7-IA-m93" secondAttribute="trailing" id="aiI-SC-UEk"/>
+                <constraint firstItem="RV7-IA-m93" firstAttribute="top" secondItem="iVs-nU-5NJ" secondAttribute="bottom" id="dxz-Zc-pGQ"/>
+                <constraint firstAttribute="trailing" secondItem="pDN-PK-VcY" secondAttribute="trailing" id="mAZ-bw-LxO"/>
+                <constraint firstItem="pDN-PK-VcY" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ylr-IZ-ebg"/>
+            </constraints>
+            <connections>
+                <outletCollection property="gestureRecognizers" destination="Y8u-lK-eLo" appends="YES" id="bZV-Iz-uI1"/>
+            </connections>
+        </view>
+        <panGestureRecognizer minimumNumberOfTouches="1" id="ljZ-41-HlD">
+            <connections>
+                <action selector="panVC:" destination="-1" id="fbi-es-dqC"/>
+            </connections>
+        </panGestureRecognizer>
+        <panGestureRecognizer minimumNumberOfTouches="1" id="Y8u-lK-eLo">
+            <connections>
+                <action selector="panDown:" destination="-1" id="8RQ-xa-HSC"/>
+            </connections>
+        </panGestureRecognizer>
+    </objects>
+    <resources>
+        <image name="podcast" width="600" height="600"/>
+    </resources>
+</document>
