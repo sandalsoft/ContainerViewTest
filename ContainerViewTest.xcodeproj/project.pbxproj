@@ -20,6 +20,13 @@
 		07A6BCFB1B81601E003EF8BD /* PlayerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07A6BCF71B81601E003EF8BD /* PlayerVC.xib */; };
 		07A6BCFC1B81601E003EF8BD /* PlayerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07A6BCF71B81601E003EF8BD /* PlayerVC.xib */; };
 		07A6BCFD1B81601E003EF8BD /* PlayerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07A6BCF71B81601E003EF8BD /* PlayerVC.xib */; };
+		07F79A3C1B82675000ABBE20 /* RAMBounceAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F79A311B82675000ABBE20 /* RAMBounceAnimation.swift */; };
+		07F79A3D1B82675000ABBE20 /* RAMFrameItemAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F79A331B82675000ABBE20 /* RAMFrameItemAnimation.swift */; };
+		07F79A3E1B82675000ABBE20 /* RAMFumeAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F79A351B82675000ABBE20 /* RAMFumeAnimation.swift */; };
+		07F79A3F1B82675000ABBE20 /* RAMRotationAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F79A371B82675000ABBE20 /* RAMRotationAnimation.swift */; };
+		07F79A401B82675000ABBE20 /* RAMTransitionItemAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F79A391B82675000ABBE20 /* RAMTransitionItemAnimation.swift */; };
+		07F79A411B82675000ABBE20 /* RAMAnimatedTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F79A3A1B82675000ABBE20 /* RAMAnimatedTabBarController.swift */; };
+		07F79A421B82675000ABBE20 /* RAMItemAnimationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F79A3B1B82675000ABBE20 /* RAMItemAnimationProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +62,13 @@
 		07A6BCEA1B815E65003EF8BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		07A6BCF61B81601E003EF8BD /* PlayerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerVC.swift; sourceTree = "<group>"; };
 		07A6BCF71B81601E003EF8BD /* PlayerVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerVC.xib; sourceTree = "<group>"; };
+		07F79A311B82675000ABBE20 /* RAMBounceAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMBounceAnimation.swift; sourceTree = "<group>"; };
+		07F79A331B82675000ABBE20 /* RAMFrameItemAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMFrameItemAnimation.swift; sourceTree = "<group>"; };
+		07F79A351B82675000ABBE20 /* RAMFumeAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMFumeAnimation.swift; sourceTree = "<group>"; };
+		07F79A371B82675000ABBE20 /* RAMRotationAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMRotationAnimation.swift; sourceTree = "<group>"; };
+		07F79A391B82675000ABBE20 /* RAMTransitionItemAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMTransitionItemAnimation.swift; sourceTree = "<group>"; };
+		07F79A3A1B82675000ABBE20 /* RAMAnimatedTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMAnimatedTabBarController.swift; sourceTree = "<group>"; };
+		07F79A3B1B82675000ABBE20 /* RAMItemAnimationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMItemAnimationProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +119,7 @@
 		07A6BCC71B815E65003EF8BD /* ContainerViewTest */ = {
 			isa = PBXGroup;
 			children = (
+				07F79A2E1B82675000ABBE20 /* RAMAnimatedTabBarController */,
 				07A6BCC81B815E65003EF8BD /* AppDelegate.swift */,
 				07A6BCCA1B815E65003EF8BD /* ViewController.swift */,
 				07A6BCCC1B815E65003EF8BD /* Main.storyboard */,
@@ -133,6 +148,68 @@
 				07A6BCEA1B815E65003EF8BD /* Info.plist */,
 			);
 			path = ContainerViewTestUITests;
+			sourceTree = "<group>";
+		};
+		07F79A2E1B82675000ABBE20 /* RAMAnimatedTabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				07F79A2F1B82675000ABBE20 /* Animations */,
+				07F79A3A1B82675000ABBE20 /* RAMAnimatedTabBarController.swift */,
+				07F79A3B1B82675000ABBE20 /* RAMItemAnimationProtocol.swift */,
+			);
+			path = RAMAnimatedTabBarController;
+			sourceTree = "<group>";
+		};
+		07F79A2F1B82675000ABBE20 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				07F79A301B82675000ABBE20 /* BounceAnimation */,
+				07F79A321B82675000ABBE20 /* FrameAnimation */,
+				07F79A341B82675000ABBE20 /* FumeAnimation */,
+				07F79A361B82675000ABBE20 /* RotationAnimation */,
+				07F79A381B82675000ABBE20 /* TransitionAniamtions */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
+		07F79A301B82675000ABBE20 /* BounceAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				07F79A311B82675000ABBE20 /* RAMBounceAnimation.swift */,
+			);
+			path = BounceAnimation;
+			sourceTree = "<group>";
+		};
+		07F79A321B82675000ABBE20 /* FrameAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				07F79A331B82675000ABBE20 /* RAMFrameItemAnimation.swift */,
+			);
+			path = FrameAnimation;
+			sourceTree = "<group>";
+		};
+		07F79A341B82675000ABBE20 /* FumeAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				07F79A351B82675000ABBE20 /* RAMFumeAnimation.swift */,
+			);
+			path = FumeAnimation;
+			sourceTree = "<group>";
+		};
+		07F79A361B82675000ABBE20 /* RotationAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				07F79A371B82675000ABBE20 /* RAMRotationAnimation.swift */,
+			);
+			path = RotationAnimation;
+			sourceTree = "<group>";
+		};
+		07F79A381B82675000ABBE20 /* TransitionAniamtions */ = {
+			isa = PBXGroup;
+			children = (
+				07F79A391B82675000ABBE20 /* RAMTransitionItemAnimation.swift */,
+			);
+			path = TransitionAniamtions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,8 +346,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				07A6BCF81B81601E003EF8BD /* PlayerVC.swift in Sources */,
+				07F79A411B82675000ABBE20 /* RAMAnimatedTabBarController.swift in Sources */,
 				07A6BCCB1B815E65003EF8BD /* ViewController.swift in Sources */,
+				07F79A401B82675000ABBE20 /* RAMTransitionItemAnimation.swift in Sources */,
+				07F79A421B82675000ABBE20 /* RAMItemAnimationProtocol.swift in Sources */,
 				07A6BCC91B815E65003EF8BD /* AppDelegate.swift in Sources */,
+				07F79A3F1B82675000ABBE20 /* RAMRotationAnimation.swift in Sources */,
+				07F79A3D1B82675000ABBE20 /* RAMFrameItemAnimation.swift in Sources */,
+				07F79A3E1B82675000ABBE20 /* RAMFumeAnimation.swift in Sources */,
+				07F79A3C1B82675000ABBE20 /* RAMBounceAnimation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,6 +499,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ContainerViewTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dicksLOL.ContainerViewTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -426,6 +511,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ContainerViewTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dicksLOL.ContainerViewTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -499,6 +585,7 @@
 				07A6BCEF1B815E65003EF8BD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		07A6BCF01B815E65003EF8BD /* Build configuration list for PBXNativeTarget "ContainerViewTestTests" */ = {
 			isa = XCConfigurationList;
@@ -507,6 +594,7 @@
 				07A6BCF21B815E65003EF8BD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		07A6BCF31B815E65003EF8BD /* Build configuration list for PBXNativeTarget "ContainerViewTestUITests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +603,7 @@
 				07A6BCF51B815E65003EF8BD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

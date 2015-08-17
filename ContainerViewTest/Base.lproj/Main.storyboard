@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8173.3" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Nzn-tP-qeZ">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8142"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Playlist-->
+        <!--Playlists-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ContainerViewTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NUR-AM-aC7">
-                                <rect key="frame" x="0.0" y="533" width="600" height="545"/>
+                                <rect key="frame" x="0.0" y="535" width="600" height="545"/>
                                 <connections>
                                     <segue destination="z0R-sV-w7y" kind="embed" id="e9V-ps-zYT"/>
                                 </connections>
@@ -26,11 +26,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="NUR-AM-aC7" secondAttribute="bottom" constant="-480" id="3jq-Rp-jzd"/>
                             <constraint firstAttribute="bottom" secondItem="NUR-AM-aC7" secondAttribute="bottom" constant="500" id="NIk-kJ-7KE"/>
-                            <constraint firstAttribute="bottom" secondItem="NUR-AM-aC7" secondAttribute="bottom" constant="-478" id="Vqq-g3-Hcj"/>
-                            <constraint firstItem="NUR-AM-aC7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="afH-MM-ynf"/>
-                            <constraint firstAttribute="trailing" secondItem="NUR-AM-aC7" secondAttribute="trailing" id="iQ1-9t-EcA"/>
-                            <constraint firstItem="NUR-AM-aC7" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="513" id="mWH-Ya-lXS"/>
+                            <constraint firstItem="NUR-AM-aC7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Nje-jM-tiA"/>
+                            <constraint firstAttribute="trailing" secondItem="NUR-AM-aC7" secondAttribute="trailing" id="fyG-3z-vWa"/>
+                            <constraint firstItem="NUR-AM-aC7" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="515" id="mp2-ee-YfD"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -38,16 +38,21 @@
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Playlist" id="yju-OY-UGS"/>
+                    <tabBarItem key="tabBarItem" title="Playlists" image="Metal Music" id="yju-OY-UGS" customClass="RAMAnimatedTabBarItem" customModule="ContainerViewTest" customModuleProvider="target">
+                        <connections>
+                            <outlet property="animation" destination="MLe-sT-zFY" id="TaL-0B-dbk"/>
+                        </connections>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <customObject id="MLe-sT-zFY" customClass="RAMFlipLeftTransitionItemAniamtions" customModule="ContainerViewTest" customModuleProvider="target"/>
             </objects>
-            <point key="canvasLocation" x="1117" y="389"/>
+            <point key="canvasLocation" x="-215" y="917"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Animated Tab Bar Controller-->
         <scene sceneID="8Ce-oa-SXe">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Nzn-tP-qeZ" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Nzn-tP-qeZ" customClass="RAMAnimatedTabBarController" customModule="ContainerViewTest" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="jhL-vh-hQ0">
@@ -57,11 +62,13 @@
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="AqS-Le-br7"/>
                         <segue destination="Nld-Lf-1Kx" kind="relationship" relationship="viewControllers" id="Jbw-58-yM6"/>
+                        <segue destination="ohq-rR-cLB" kind="relationship" relationship="viewControllers" id="vlg-gx-xtI"/>
+                        <segue destination="hmY-LX-lVR" kind="relationship" relationship="viewControllers" id="6Ny-PC-E3j"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iqM-t3-Dax" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="305" y="389"/>
+            <point key="canvasLocation" x="829" y="161"/>
         </scene>
         <!--PlayerVC-->
         <scene sceneID="f50-wQ-kzt">
@@ -69,9 +76,9 @@
                 <viewController id="z0R-sV-w7y" customClass="PlayerVC" customModule="ContainerViewTest" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ba1-1y-4su" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1801" y="632"/>
+            <point key="canvasLocation" x="-215" y="1555.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Search-->
         <scene sceneID="Xqs-8V-nOR">
             <objects>
                 <viewController id="Nld-Lf-1Kx" sceneMemberID="viewController">
@@ -84,7 +91,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Rf-qD-o3R">
-                                <rect key="frame" x="0.0" y="500" width="600" height="545"/>
+                                <rect key="frame" x="0.0" y="535" width="600" height="545"/>
                                 <connections>
                                     <segue destination="liT-ZW-rfu" kind="embed" id="mHh-Ec-frM"/>
                                 </connections>
@@ -92,17 +99,22 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="6Rf-qD-o3R" firstAttribute="leading" secondItem="JC2-Ej-vg8" secondAttribute="leading" id="OVe-63-xAK"/>
-                            <constraint firstAttribute="trailing" secondItem="6Rf-qD-o3R" secondAttribute="trailing" id="twW-3v-GM7"/>
-                            <constraint firstItem="6Rf-qD-o3R" firstAttribute="top" secondItem="1VY-Ve-dFd" secondAttribute="bottom" constant="480" id="vi1-TX-wDY"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="6Rf-qD-o3R" secondAttribute="bottom" constant="-445" id="xaf-TW-nuI"/>
+                            <constraint firstAttribute="bottom" secondItem="6Rf-qD-o3R" secondAttribute="bottom" constant="-480" id="2aA-W6-qrW"/>
+                            <constraint firstAttribute="trailing" secondItem="6Rf-qD-o3R" secondAttribute="trailing" id="Kcf-gn-nR5"/>
+                            <constraint firstItem="6Rf-qD-o3R" firstAttribute="leading" secondItem="JC2-Ej-vg8" secondAttribute="leading" id="afM-zV-bRn"/>
+                            <constraint firstItem="6Rf-qD-o3R" firstAttribute="top" secondItem="1VY-Ve-dFd" secondAttribute="bottom" constant="515" id="cYi-25-YvB"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="search" id="8JV-Lt-Q6e"/>
+                    <tabBarItem key="tabBarItem" title="Search" image="Search" id="8JV-Lt-Q6e" customClass="RAMAnimatedTabBarItem" customModule="ContainerViewTest" customModuleProvider="target">
+                        <connections>
+                            <outlet property="animation" destination="7eb-aT-mqm" id="bfx-ha-yBS"/>
+                        </connections>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yyr-Vi-kyi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="7eb-aT-mqm" customClass="RAMFlipLeftTransitionItemAniamtions" customModule="ContainerViewTest" customModuleProvider="target"/>
             </objects>
-            <point key="canvasLocation" x="1116" y="1062"/>
+            <point key="canvasLocation" x="516" y="926"/>
         </scene>
         <!--PlayerVC-->
         <scene sceneID="S5I-aD-aH2">
@@ -110,7 +122,93 @@
                 <viewController id="liT-ZW-rfu" customClass="PlayerVC" customModule="ContainerViewTest" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GHb-Iu-NR1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1808" y="1388"/>
+            <point key="canvasLocation" x="494" y="1539.5"/>
+        </scene>
+        <!--Podcasts-->
+        <scene sceneID="NvT-Pb-eTU">
+            <objects>
+                <viewController id="ohq-rR-cLB" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nVm-WA-Tqc"/>
+                        <viewControllerLayoutGuide type="bottom" id="unw-r6-eRX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fvQ-pi-7GW">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vfq-BB-chv">
+                                <rect key="frame" x="0.0" y="535" width="600" height="545"/>
+                                <connections>
+                                    <segue destination="8eH-1G-d1T" kind="embed" id="a2c-53-dpt"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Podcasts" image="Wi-Fi" id="sda-kA-Di1" customClass="RAMAnimatedTabBarItem" customModule="ContainerViewTest" customModuleProvider="target">
+                        <connections>
+                            <outlet property="animation" destination="nzb-f8-Hh1" id="mQb-UP-DkO"/>
+                        </connections>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HDF-Vx-fby" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="nzb-f8-Hh1" customClass="RAMFlipLeftTransitionItemAniamtions" customModule="ContainerViewTest" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="1271" y="926"/>
+        </scene>
+        <!--Downloads-->
+        <scene sceneID="gNF-qq-dOl">
+            <objects>
+                <viewController id="hmY-LX-lVR" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="222-Q7-6MS"/>
+                        <viewControllerLayoutGuide type="bottom" id="DP9-4C-GeO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UZJ-Td-5CD">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YLl-OH-Uif">
+                                <rect key="frame" x="0.0" y="535" width="600" height="545"/>
+                                <connections>
+                                    <segue destination="t8v-cH-maM" kind="embed" id="4wr-fh-Lin"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Downloads" image="Download" id="DSy-K2-VDm" customClass="RAMAnimatedTabBarItem" customModule="ContainerViewTest" customModuleProvider="target">
+                        <connections>
+                            <outlet property="animation" destination="MqP-of-z4L" id="ox6-nP-wE6"/>
+                        </connections>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="auq-Lg-oAc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="MqP-of-z4L" customClass="RAMFlipLeftTransitionItemAniamtions" customModule="ContainerViewTest" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="1923" y="917"/>
+        </scene>
+        <!--PlayerVC-->
+        <scene sceneID="cSc-Gl-f40">
+            <objects>
+                <viewController id="8eH-1G-d1T" customClass="PlayerVC" customModule="ContainerViewTest" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Wj-Pp-PiE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1276" y="1548.5"/>
+        </scene>
+        <!--PlayerVC-->
+        <scene sceneID="zLU-84-Gs8">
+            <objects>
+                <viewController id="t8v-cH-maM" customClass="PlayerVC" customModule="ContainerViewTest" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4oc-gA-Nly" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1923" y="1562.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Download" width="32" height="32"/>
+        <image name="Metal Music" width="32" height="32"/>
+        <image name="Search" width="32" height="32"/>
+        <image name="Wi-Fi" width="32" height="32"/>
+    </resources>
 </document>
