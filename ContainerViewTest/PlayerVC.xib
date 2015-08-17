@@ -2,15 +2,11 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8173.3" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8142"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <mutableArray key="System San Francisco Display Regular.ttf">
-            <string>.HelveticaNeueDeskInterface-Regular</string>
-            <string>.HelveticaNeueDeskInterface-Regular</string>
-            <string>.HelveticaNeueDeskInterface-Regular</string>
-            <string>.HelveticaNeueDeskInterface-Regular</string>
-            <string>.HelveticaNeueDeskInterface-Regular</string>
-            <string>.HelveticaNeueDeskInterface-Regular</string>
+        <mutableArray key="HelveticaNeueLights.ttc">
+            <string>HelveticaNeue-LightItalic</string>
         </mutableArray>
     </customFonts>
     <objects>
@@ -26,110 +22,96 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pDN-PK-VcY" userLabel="TopPlayerView">
-                    <rect key="frame" x="0.0" y="0.0" width="600" height="85"/>
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="28"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Econtalk - Epispde 153:  Federal Reserve Miscues on Stimulus (8/06/2015)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZrZ-bT-vQL">
-                            <rect key="frame" x="66" y="5" width="468" height="16.5"/>
-                            <fontDescription key="fontDescription" name=".HelveticaNeueDeskInterface-Regular" family="San Francisco Display" pointSize="14"/>
-                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Nm-J4-zhu">
-                            <rect key="frame" x="285" y="28" width="30" height="30"/>
-                            <state key="normal" title="&lt;&lt;"/>
+                        <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.23999999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="05G-Eb-AGg">
+                            <rect key="frame" x="0.0" y="26" width="600" height="2"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="2" id="8qy-eN-TJm"/>
+                            </constraints>
+                            <color key="progressTintColor" red="0.14506777400000001" green="0.56921911160000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="trackTintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        </progressView>
+                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IFt-WZ-Dhi">
+                            <rect key="frame" x="92" y="2" width="417" height="24"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Epispde 153:  Federal Reserve Miscues on Stimulus" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jad-8W-UOp">
+                                    <rect key="frame" x="8" y="1" width="401" height="21"/>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-LightItalic" family="Helvetica Neue" pointSize="10"/>
+                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="Jad-8W-UOp" firstAttribute="centerX" secondItem="IFt-WZ-Dhi" secondAttribute="centerX" id="Bpp-aw-LON"/>
+                                <constraint firstItem="Jad-8W-UOp" firstAttribute="centerY" secondItem="IFt-WZ-Dhi" secondAttribute="centerY" id="Tly-5L-89G"/>
+                                <constraint firstAttribute="bottom" secondItem="Jad-8W-UOp" secondAttribute="bottom" constant="2" id="hVQ-L7-6SD"/>
+                                <constraint firstItem="Jad-8W-UOp" firstAttribute="trailing" secondItem="IFt-WZ-Dhi" secondAttribute="trailingMargin" id="pNw-tS-ndr"/>
+                                <constraint firstItem="Jad-8W-UOp" firstAttribute="leading" secondItem="IFt-WZ-Dhi" secondAttribute="leadingMargin" id="pzc-fT-u4a"/>
+                                <constraint firstItem="Jad-8W-UOp" firstAttribute="top" secondItem="IFt-WZ-Dhi" secondAttribute="top" constant="1" id="vE2-vW-W0r"/>
+                            </constraints>
+                        </scrollView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="urc-ZD-Ey5">
+                            <rect key="frame" x="8" y="2" width="25" height="25"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="25" id="HJZ-nV-ONL"/>
+                                <constraint firstAttribute="width" constant="25" id="cFM-oM-zBA"/>
+                            </constraints>
+                            <state key="normal" image="Play"/>
+                            <state key="selected" image="Pause"/>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="urc-ZD-Ey5">
-                            <rect key="frame" x="285" y="28" width="30" height="30"/>
-                            <state key="normal" title="|&gt;"/>
-                        </button>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8CP-Xu-p26">
-                            <rect key="frame" x="285" y="28" width="30" height="30"/>
-                            <state key="normal" title="&gt;&gt;"/>
-                        </button>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="-00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H6s-pJ-HOV">
-                            <rect key="frame" x="551" y="28" width="40.5" height="17"/>
-                            <fontDescription key="fontDescription" name=".HelveticaNeueDeskInterface-Regular" family="San Francisco Display" pointSize="14"/>
-                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0:00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3DL-LU-lek">
-                            <rect key="frame" x="8" y="28" width="27.5" height="17"/>
-                            <fontDescription key="fontDescription" name=".HelveticaNeueDeskInterface-Regular" family="San Francisco Display" pointSize="14"/>
-                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            <nil key="highlightedColor"/>
-                        </label>
                     </subviews>
+                    <color key="backgroundColor" red="0.88995524749999999" green="0.9008443813" blue="0.89963904149999996" alpha="1" colorSpace="calibratedRGB"/>
                     <gestureRecognizers/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="85" id="olM-Kw-Dbi"/>
+                        <constraint firstItem="IFt-WZ-Dhi" firstAttribute="top" secondItem="urc-ZD-Ey5" secondAttribute="top" id="ADn-Ly-ggw"/>
+                        <constraint firstItem="05G-Eb-AGg" firstAttribute="leading" secondItem="pDN-PK-VcY" secondAttribute="leading" id="DG2-tT-hIL"/>
+                        <constraint firstItem="05G-Eb-AGg" firstAttribute="top" secondItem="IFt-WZ-Dhi" secondAttribute="bottom" id="Ow7-PL-ERI"/>
+                        <constraint firstItem="IFt-WZ-Dhi" firstAttribute="centerY" secondItem="urc-ZD-Ey5" secondAttribute="centerY" id="R8D-fL-7mf"/>
+                        <constraint firstItem="urc-ZD-Ey5" firstAttribute="leading" secondItem="pDN-PK-VcY" secondAttribute="leading" constant="8" id="TNP-1V-TdG"/>
+                        <constraint firstItem="IFt-WZ-Dhi" firstAttribute="centerX" secondItem="05G-Eb-AGg" secondAttribute="centerX" id="dD3-n8-spw"/>
+                        <constraint firstItem="IFt-WZ-Dhi" firstAttribute="leading" secondItem="urc-ZD-Ey5" secondAttribute="trailing" constant="59" id="iUq-u7-262"/>
+                        <constraint firstItem="urc-ZD-Ey5" firstAttribute="top" secondItem="pDN-PK-VcY" secondAttribute="top" constant="2" id="lL8-x4-9dP"/>
+                        <constraint firstAttribute="bottom" secondItem="05G-Eb-AGg" secondAttribute="bottom" id="nmv-4L-Rft"/>
+                        <constraint firstItem="05G-Eb-AGg" firstAttribute="centerX" secondItem="IFt-WZ-Dhi" secondAttribute="centerX" id="qCV-tK-5ce"/>
+                        <constraint firstItem="05G-Eb-AGg" firstAttribute="centerX" secondItem="pDN-PK-VcY" secondAttribute="centerX" id="tn2-3P-V8Q"/>
                     </constraints>
                     <connections>
                         <outletCollection property="gestureRecognizers" destination="ljZ-41-HlD" appends="YES" id="CQg-07-MXd"/>
                     </connections>
                 </view>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="podcast" translatesAutoresizingMaskIntoConstraints="NO" id="iVs-nU-5NJ">
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="podcast" translatesAutoresizingMaskIntoConstraints="NO" id="iVs-nU-5NJ">
                     <rect key="frame" x="175" y="175" width="250" height="250"/>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RV7-IA-m93" userLabel="BottomPlayerView">
                     <rect key="frame" x="0.0" y="515" width="600" height="85"/>
-                    <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Econtalk - Epispde 153:  Federal Reserve Miscues on Stimulus (8/06/2015)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BYN-RT-b5F">
-                            <rect key="frame" x="0.0" y="1" width="600" height="16.5"/>
-                            <fontDescription key="fontDescription" name=".HelveticaNeueDeskInterface-Regular" family="San Francisco Display" pointSize="14"/>
-                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iix-8G-W9W">
-                            <rect key="frame" x="285" y="28" width="30" height="30"/>
-                            <state key="normal" title="&lt;&lt;"/>
-                        </button>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UES-OH-HFo">
-                            <rect key="frame" x="285" y="28" width="30" height="30"/>
-                            <state key="normal" title="|&gt;"/>
-                        </button>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fti-OB-JAG">
-                            <rect key="frame" x="285" y="28" width="30" height="30"/>
-                            <state key="normal" title="&gt;&gt;"/>
-                        </button>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1:36" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jdG-jc-x4J">
-                            <rect key="frame" x="286" y="34.5" width="27.5" height="16.5"/>
-                            <fontDescription key="fontDescription" name=".HelveticaNeueDeskInterface-Regular" family="San Francisco Display" pointSize="14"/>
-                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="-48:09" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vKY-1q-uIG">
-                            <rect key="frame" x="279" y="34.5" width="40.5" height="16.5"/>
-                            <fontDescription key="fontDescription" name=".HelveticaNeueDeskInterface-Regular" family="San Francisco Display" pointSize="14"/>
-                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                    </subviews>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstItem="BYN-RT-b5F" firstAttribute="top" secondItem="RV7-IA-m93" secondAttribute="top" constant="1" id="BVL-C6-NXO"/>
                         <constraint firstAttribute="height" constant="85" id="k60-Yt-nzB"/>
-                        <constraint firstItem="BYN-RT-b5F" firstAttribute="leading" secondItem="RV7-IA-m93" secondAttribute="leading" id="oWV-xX-0Nl"/>
-                        <constraint firstAttribute="trailing" secondItem="BYN-RT-b5F" secondAttribute="trailing" id="x1b-ty-Wz3"/>
                     </constraints>
                 </view>
             </subviews>
             <gestureRecognizers/>
             <constraints>
-                <constraint firstItem="iVs-nU-5NJ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Bkw-e0-l9l"/>
-                <constraint firstItem="iVs-nU-5NJ" firstAttribute="top" secondItem="pDN-PK-VcY" secondAttribute="bottom" id="BuD-xz-wEL"/>
+                <constraint firstItem="pDN-PK-VcY" firstAttribute="trailing" secondItem="RV7-IA-m93" secondAttribute="trailing" id="2PO-rp-VIP"/>
+                <constraint firstItem="pDN-PK-VcY" firstAttribute="leading" secondItem="RV7-IA-m93" secondAttribute="leading" id="8Qq-nu-Tcb"/>
+                <constraint firstItem="iVs-nU-5NJ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="175" id="Bkw-e0-l9l"/>
+                <constraint firstItem="iVs-nU-5NJ" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="D3W-TC-IlA"/>
                 <constraint firstAttribute="bottom" secondItem="RV7-IA-m93" secondAttribute="bottom" id="DSd-3W-VD6"/>
                 <constraint firstItem="RV7-IA-m93" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Ef8-m5-JKF"/>
-                <constraint firstItem="pDN-PK-VcY" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="FLI-6k-Whv"/>
-                <constraint firstAttribute="trailing" secondItem="iVs-nU-5NJ" secondAttribute="trailing" id="L6Q-24-nnC"/>
-                <constraint firstItem="pDN-PK-VcY" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="NB5-PS-aav"/>
+                <constraint firstAttribute="trailing" secondItem="iVs-nU-5NJ" secondAttribute="trailing" constant="175" id="L6Q-24-nnC"/>
+                <constraint firstItem="pDN-PK-VcY" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="SDk-uM-aTS"/>
                 <constraint firstItem="RV7-IA-m93" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Xcf-HK-nrE"/>
                 <constraint firstAttribute="trailing" secondItem="RV7-IA-m93" secondAttribute="trailing" id="aiI-SC-UEk"/>
-                <constraint firstItem="RV7-IA-m93" firstAttribute="top" secondItem="iVs-nU-5NJ" secondAttribute="bottom" id="dxz-Zc-pGQ"/>
-                <constraint firstAttribute="trailing" secondItem="pDN-PK-VcY" secondAttribute="trailing" id="mAZ-bw-LxO"/>
-                <constraint firstItem="pDN-PK-VcY" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ylr-IZ-ebg"/>
+                <constraint firstItem="RV7-IA-m93" firstAttribute="top" secondItem="iVs-nU-5NJ" secondAttribute="bottom" constant="90" id="dxz-Zc-pGQ"/>
+                <constraint firstAttribute="bottom" secondItem="pDN-PK-VcY" secondAttribute="bottom" constant="572" id="e9m-oZ-Jka"/>
+                <constraint firstItem="iVs-nU-5NJ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="jhR-LS-8aZ"/>
             </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
             <connections>
                 <outletCollection property="gestureRecognizers" destination="Y8u-lK-eLo" appends="YES" id="bZV-Iz-uI1"/>
             </connections>
+            <point key="canvasLocation" x="431" y="302"/>
         </view>
         <panGestureRecognizer minimumNumberOfTouches="1" id="ljZ-41-HlD">
             <connections>
@@ -143,6 +125,8 @@
         </panGestureRecognizer>
     </objects>
     <resources>
+        <image name="Pause" width="25" height="25"/>
+        <image name="Play" width="25" height="25"/>
         <image name="podcast" width="600" height="600"/>
     </resources>
 </document>

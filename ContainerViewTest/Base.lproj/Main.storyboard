@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NUR-AM-aC7">
-                                <rect key="frame" x="0.0" y="535" width="600" height="545"/>
+                                <rect key="frame" x="0.0" y="550" width="600" height="540"/>
                                 <connections>
                                     <segue destination="z0R-sV-w7y" kind="embed" id="e9V-ps-zYT"/>
                                 </connections>
@@ -26,11 +26,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="NUR-AM-aC7" secondAttribute="bottom" constant="-480" id="3jq-Rp-jzd"/>
                             <constraint firstAttribute="bottom" secondItem="NUR-AM-aC7" secondAttribute="bottom" constant="500" id="NIk-kJ-7KE"/>
-                            <constraint firstItem="NUR-AM-aC7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Nje-jM-tiA"/>
-                            <constraint firstAttribute="trailing" secondItem="NUR-AM-aC7" secondAttribute="trailing" id="fyG-3z-vWa"/>
-                            <constraint firstItem="NUR-AM-aC7" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="515" id="mp2-ee-YfD"/>
+                            <constraint firstItem="NUR-AM-aC7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="XwK-8s-CEs"/>
+                            <constraint firstAttribute="trailing" secondItem="NUR-AM-aC7" secondAttribute="trailing" id="db8-LM-YyA"/>
+                            <constraint firstAttribute="bottom" secondItem="NUR-AM-aC7" secondAttribute="bottom" constant="-490" id="mhN-fX-bFl"/>
+                            <constraint firstItem="NUR-AM-aC7" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="530" id="o6d-42-m6B"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
