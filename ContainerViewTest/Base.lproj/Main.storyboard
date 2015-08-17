@@ -38,21 +38,16 @@
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Playlists" image="Metal Music" id="yju-OY-UGS" customClass="RAMAnimatedTabBarItem" customModule="ContainerViewTest" customModuleProvider="target">
-                        <connections>
-                            <outlet property="animation" destination="MLe-sT-zFY" id="TaL-0B-dbk"/>
-                        </connections>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="Playlists" image="Metal Music" id="yju-OY-UGS"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <customObject id="MLe-sT-zFY" customClass="RAMFlipLeftTransitionItemAniamtions" customModule="ContainerViewTest" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="-215" y="917"/>
         </scene>
-        <!--Animated Tab Bar Controller-->
+        <!--Tab Bar Controller-->
         <scene sceneID="8Ce-oa-SXe">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Nzn-tP-qeZ" customClass="RAMAnimatedTabBarController" customModule="ContainerViewTest" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Nzn-tP-qeZ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="jhL-vh-hQ0">
@@ -105,14 +100,9 @@
                             <constraint firstItem="6Rf-qD-o3R" firstAttribute="top" secondItem="1VY-Ve-dFd" secondAttribute="bottom" constant="515" id="cYi-25-YvB"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Search" image="Search" id="8JV-Lt-Q6e" customClass="RAMAnimatedTabBarItem" customModule="ContainerViewTest" customModuleProvider="target">
-                        <connections>
-                            <outlet property="animation" destination="7eb-aT-mqm" id="bfx-ha-yBS"/>
-                        </connections>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="Search" image="Search" id="8JV-Lt-Q6e"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yyr-Vi-kyi" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <customObject id="7eb-aT-mqm" customClass="RAMFlipLeftTransitionItemAniamtions" customModule="ContainerViewTest" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="516" y="926"/>
         </scene>
@@ -145,14 +135,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Podcasts" image="Wi-Fi" id="sda-kA-Di1" customClass="RAMAnimatedTabBarItem" customModule="ContainerViewTest" customModuleProvider="target">
-                        <connections>
-                            <outlet property="animation" destination="nzb-f8-Hh1" id="mQb-UP-DkO"/>
-                        </connections>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="Podcasts" image="Wi-Fi" id="sda-kA-Di1"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HDF-Vx-fby" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <customObject id="nzb-f8-Hh1" customClass="RAMFlipLeftTransitionItemAniamtions" customModule="ContainerViewTest" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="1271" y="926"/>
         </scene>
@@ -177,14 +162,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Downloads" image="Download" id="DSy-K2-VDm" customClass="RAMAnimatedTabBarItem" customModule="ContainerViewTest" customModuleProvider="target">
-                        <connections>
-                            <outlet property="animation" destination="MqP-of-z4L" id="ox6-nP-wE6"/>
-                        </connections>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="Downloads" image="Download" id="DSy-K2-VDm"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="auq-Lg-oAc" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <customObject id="MqP-of-z4L" customClass="RAMFlipLeftTransitionItemAniamtions" customModule="ContainerViewTest" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="1923" y="917"/>
         </scene>
