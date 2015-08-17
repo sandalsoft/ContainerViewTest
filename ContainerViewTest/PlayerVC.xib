@@ -2,10 +2,10 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8173.3" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8142"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="HelveticaNeueLights.ttc">
-            <string>HelveticaNeue-LightItalic</string>
             <string>HelveticaNeue-LightItalic</string>
         </mutableArray>
     </customFonts>
@@ -22,68 +22,38 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pDN-PK-VcY" userLabel="TopPlayerView">
-                    <rect key="frame" x="0.0" y="0.0" width="600" height="30"/>
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="28"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="urc-ZD-Ey5">
-                            <rect key="frame" x="8" y="2" width="25" height="25"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="25" id="HJZ-nV-ONL"/>
-                                <constraint firstAttribute="width" constant="25" id="cFM-oM-zBA"/>
-                            </constraints>
+                            <rect key="frame" x="8" y="1" width="25" height="25"/>
                             <state key="normal" image="Play"/>
                             <state key="selected" image="Pause"/>
                         </button>
                         <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.23999999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="05G-Eb-AGg">
-                            <rect key="frame" x="0.0" y="28" width="600" height="2"/>
+                            <rect key="frame" x="0.0" y="26" width="600" height="2"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="2" id="zKn-A1-s8v"/>
+                            </constraints>
                             <color key="progressTintColor" red="1" green="0.96696235726223212" blue="0.11252368284245662" alpha="1" colorSpace="calibratedRGB"/>
                             <color key="trackTintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         </progressView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Epispde 153:  Federal Reserve Miscues on Stimulus" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CWD-xw-bX7">
-                            <rect key="frame" x="58" y="13" width="485" height="14"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Epispde 153:  Federal Reserve Miscues on Stimulus" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CWD-xw-bX7">
+                            <rect key="frame" x="94" y="3" width="412" height="21"/>
                             <fontDescription key="fontDescription" name="HelveticaNeue-LightItalic" family="Helvetica Neue" pointSize="12"/>
                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EconTalk" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6kj-eh-QL6">
-                            <rect key="frame" x="58" y="0.0" width="485" height="14"/>
-                            <fontDescription key="fontDescription" name="HelveticaNeue-LightItalic" family="Helvetica Neue" pointSize="12"/>
-                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NzP-Bc-3Qf">
-                            <rect key="frame" x="561" y="1" width="25" height="25"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="25" id="hmH-ah-itq"/>
-                                <constraint firstAttribute="height" constant="25" id="oGL-3z-qUY"/>
-                            </constraints>
-                            <state key="normal" image="Collapse Arrow"/>
-                        </button>
                     </subviews>
                     <color key="backgroundColor" red="0.88995524749999999" green="0.9008443813" blue="0.89963904149999996" alpha="1" colorSpace="calibratedRGB"/>
                     <gestureRecognizers/>
                     <constraints>
-                        <constraint firstItem="NzP-Bc-3Qf" firstAttribute="top" secondItem="pDN-PK-VcY" secondAttribute="top" constant="1" id="9gf-dp-vnd"/>
-                        <constraint firstItem="6kj-eh-QL6" firstAttribute="trailing" secondItem="CWD-xw-bX7" secondAttribute="trailing" id="A04-3A-gXa"/>
-                        <constraint firstItem="6kj-eh-QL6" firstAttribute="top" secondItem="pDN-PK-VcY" secondAttribute="top" id="BPc-B2-ozz"/>
-                        <constraint firstItem="05G-Eb-AGg" firstAttribute="leading" secondItem="pDN-PK-VcY" secondAttribute="leading" id="FzQ-2O-VEl"/>
-                        <constraint firstItem="05G-Eb-AGg" firstAttribute="centerX" secondItem="CWD-xw-bX7" secondAttribute="centerX" id="Lnq-hF-v98"/>
-                        <constraint firstItem="CWD-xw-bX7" firstAttribute="bottom" secondItem="urc-ZD-Ey5" secondAttribute="bottom" id="OLj-1g-yeg"/>
-                        <constraint firstItem="6kj-eh-QL6" firstAttribute="leading" secondItem="CWD-xw-bX7" secondAttribute="leading" id="UlC-7q-yqI"/>
-                        <constraint firstAttribute="bottom" secondItem="05G-Eb-AGg" secondAttribute="bottom" id="acU-yV-Dan"/>
-                        <constraint firstAttribute="trailing" secondItem="05G-Eb-AGg" secondAttribute="trailing" id="iNG-lQ-B3T"/>
+                        <constraint firstItem="urc-ZD-Ey5" firstAttribute="leading" secondItem="pDN-PK-VcY" secondAttribute="leadingMargin" id="BBB-Ns-WPz"/>
+                        <constraint firstItem="05G-Eb-AGg" firstAttribute="leading" secondItem="pDN-PK-VcY" secondAttribute="leading" id="IUE-ba-Ryi"/>
+                        <constraint firstAttribute="bottom" secondItem="05G-Eb-AGg" secondAttribute="bottom" id="eMz-CH-DvB"/>
                         <constraint firstAttribute="height" constant="28" id="kAr-B7-hPD"/>
-                        <constraint firstItem="05G-Eb-AGg" firstAttribute="top" secondItem="CWD-xw-bX7" secondAttribute="bottom" constant="1" id="vId-6s-TOB"/>
-                        <constraint firstItem="NzP-Bc-3Qf" firstAttribute="leading" secondItem="6kj-eh-QL6" secondAttribute="trailing" constant="18" id="vdj-nP-EQq"/>
-                        <constraint firstAttribute="bottom" secondItem="NzP-Bc-3Qf" secondAttribute="bottom" constant="1" id="xhN-Ho-7Dn"/>
-                        <constraint firstAttribute="trailing" secondItem="NzP-Bc-3Qf" secondAttribute="trailing" constant="14" id="zLq-h0-hup"/>
-                        <constraint firstItem="CWD-xw-bX7" firstAttribute="leading" secondItem="urc-ZD-Ey5" secondAttribute="trailing" constant="25" id="zZ1-F3-AXS"/>
+                        <constraint firstItem="urc-ZD-Ey5" firstAttribute="centerY" secondItem="pDN-PK-VcY" secondAttribute="centerY" id="xI4-DX-vOL"/>
+                        <constraint firstAttribute="trailing" secondItem="05G-Eb-AGg" secondAttribute="trailing" id="zpC-yM-cuG"/>
                     </constraints>
-                    <variation key="default">
-                        <mask key="constraints">
-                            <exclude reference="kAr-B7-hPD"/>
-                            <exclude reference="xhN-Ho-7Dn"/>
-                        </mask>
-                    </variation>
                     <connections>
                         <outletCollection property="gestureRecognizers" destination="ljZ-41-HlD" appends="YES" id="CQg-07-MXd"/>
                     </connections>
@@ -98,22 +68,25 @@
                         <constraint firstAttribute="height" constant="85" id="k60-Yt-nzB"/>
                     </constraints>
                 </view>
+                <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="s13-57-TH0">
+                    <rect key="frame" x="147" y="90" width="196" height="37"/>
+                </pageControl>
             </subviews>
             <gestureRecognizers/>
             <constraints>
+                <constraint firstItem="pDN-PK-VcY" firstAttribute="trailing" secondItem="RV7-IA-m93" secondAttribute="trailing" id="2PO-rp-VIP"/>
+                <constraint firstItem="pDN-PK-VcY" firstAttribute="leading" secondItem="RV7-IA-m93" secondAttribute="leading" id="8Qq-nu-Tcb"/>
                 <constraint firstItem="iVs-nU-5NJ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="175" id="Bkw-e0-l9l"/>
                 <constraint firstItem="iVs-nU-5NJ" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="D3W-TC-IlA"/>
                 <constraint firstAttribute="bottom" secondItem="RV7-IA-m93" secondAttribute="bottom" id="DSd-3W-VD6"/>
-                <constraint firstItem="pDN-PK-VcY" firstAttribute="leading" secondItem="RV7-IA-m93" secondAttribute="leading" id="Dgf-dv-dbY"/>
                 <constraint firstItem="RV7-IA-m93" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Ef8-m5-JKF"/>
-                <constraint firstItem="pDN-PK-VcY" firstAttribute="trailing" secondItem="RV7-IA-m93" secondAttribute="trailing" id="Jfq-aJ-vw3"/>
                 <constraint firstAttribute="trailing" secondItem="iVs-nU-5NJ" secondAttribute="trailing" constant="175" id="L6Q-24-nnC"/>
-                <constraint firstItem="pDN-PK-VcY" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="RYa-rk-CsV"/>
+                <constraint firstItem="pDN-PK-VcY" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="SDk-uM-aTS"/>
                 <constraint firstItem="RV7-IA-m93" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Xcf-HK-nrE"/>
                 <constraint firstAttribute="trailing" secondItem="RV7-IA-m93" secondAttribute="trailing" id="aiI-SC-UEk"/>
                 <constraint firstItem="RV7-IA-m93" firstAttribute="top" secondItem="iVs-nU-5NJ" secondAttribute="bottom" constant="90" id="dxz-Zc-pGQ"/>
+                <constraint firstAttribute="bottom" secondItem="pDN-PK-VcY" secondAttribute="bottom" constant="572" id="e9m-oZ-Jka"/>
                 <constraint firstItem="iVs-nU-5NJ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="jhR-LS-8aZ"/>
-                <constraint firstAttribute="bottom" secondItem="pDN-PK-VcY" secondAttribute="bottom" constant="570" id="uUD-YI-mxh"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -134,7 +107,6 @@
         </panGestureRecognizer>
     </objects>
     <resources>
-        <image name="Collapse Arrow" width="24" height="24"/>
         <image name="Pause" width="25" height="25"/>
         <image name="Play" width="25" height="25"/>
         <image name="podcast" width="600" height="600"/>
