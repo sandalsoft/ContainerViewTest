@@ -13,15 +13,18 @@ let tabBarOffset: CGFloat = 5.0
 class PlayerVC: UIViewController {
 
 
+
+
   @IBOutlet weak var topPlayerView: UIView!
   
-    override func viewDidLoad() {
-        super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
+  
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    
+      }
+  override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
