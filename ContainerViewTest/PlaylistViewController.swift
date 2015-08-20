@@ -21,7 +21,8 @@ class PlaylistViewController: UIViewController {
         toItem: self.view,
         attribute: NSLayoutAttribute.Bottom,
         multiplier: 1.0, constant: containerViewOffset))
-        // Do any additional setup after loading the view.
+      
+      self.view.layoutIfNeeded()
     }
 
     override func didReceiveMemoryWarning() {

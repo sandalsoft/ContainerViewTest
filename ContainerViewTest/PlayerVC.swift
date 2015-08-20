@@ -17,10 +17,13 @@ class PlayerVC: UIViewController {
   @IBOutlet weak var topPlayerView: UIView!
   @IBOutlet var mainView: UIView!
   
+  @IBOutlet weak var podcastImageView: UIImageView!
   
   override func viewDidLoad() {
     super.viewDidLoad()
     topOfFrame = -(self.view.frame.height - 65) // -671.0 on 6+
+    self.mainView.userInteractionEnabled = true
+    self.podcastImageView.userInteractionEnabled = true
     
   }
   
@@ -29,7 +32,6 @@ class PlayerVC: UIViewController {
     //swipe up
 
     let translation = gesture.translationInView(self.view)
-    print(translation)
     
     if (gesture.state == UIGestureRecognizerState.Ended) {
       if (translation.y > CGFloat(-100.0)) {
@@ -60,9 +62,11 @@ class PlayerVC: UIViewController {
   
   func showFullPlayer() {
     UIView.animateWithDuration(0.5) { () -> Void in
-      self.view.frame.origin.y = self.topOfFrame
+self.view.clipsToBounds = true
+//      self.view.frame.origin.y = self.topOfFrame
+
       self.tabBarController?.tabBar.alpha = 0
-      self.topPlayerView?.alpha = 0
+      self.topPlayerView?.alpha = 1
     }//animate
   }
   
@@ -76,6 +80,9 @@ class PlayerVC: UIViewController {
 
   }
   
+  @IBAction func bottomGrayBoxHideGesture(gesture: UIPanGestureRecognizer) {
+    print(gesture)
+  }
 
 //  
 //  
