@@ -15,7 +15,12 @@ class PlaylistViewController: UIViewController {
         super.viewDidLoad()
 
       let containerViewOffset: CGFloat = -89.0
-      self.view.addConstraint(NSLayoutConstraint(item: containerView, attribute: NSLayoutAttribute.Top, relatedBy: NSLayoutRelation.Equal, toItem: self.view, attribute: NSLayoutAttribute.Bottom, multiplier: 1.0, constant: containerViewOffset))
+      self.view.addConstraint(NSLayoutConstraint(item: containerView,
+        attribute: NSLayoutAttribute.Top,
+        relatedBy: NSLayoutRelation.Equal,
+        toItem: self.view,
+        attribute: NSLayoutAttribute.Bottom,
+        multiplier: 1.0, constant: containerViewOffset))
         // Do any additional setup after loading the view.
     }
 
