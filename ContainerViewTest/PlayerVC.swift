@@ -42,8 +42,8 @@ class PlayerVC: UIViewController {
     }
   }//showplayergesture
   
-  
-  @IBAction func hideFullPlayerGesture(gesture: UIPanGestureRecognizer) {
+  @IBAction func hidFullPlayerGesture(gesture: UIPanGestureRecognizer) {
+    print("hidePlayerGesture")
     //swipe down
     let point = gesture.locationInView(self.view)
     print("point: \(point)")
