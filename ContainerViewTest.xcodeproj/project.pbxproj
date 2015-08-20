@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		072E68B51B8590B30088AE36 /* PlaylistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072E68B41B8590B30088AE36 /* PlaylistViewController.swift */; };
 		07A6BCC91B815E65003EF8BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A6BCC81B815E65003EF8BD /* AppDelegate.swift */; };
 		07A6BCCB1B815E65003EF8BD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A6BCCA1B815E65003EF8BD /* ViewController.swift */; };
 		07A6BCCE1B815E65003EF8BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07A6BCCC1B815E65003EF8BD /* Main.storyboard */; };
@@ -47,6 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		072E68B41B8590B30088AE36 /* PlaylistViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaylistViewController.swift; sourceTree = "<group>"; };
 		07A6BCC51B815E65003EF8BD /* ContainerViewTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContainerViewTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07A6BCC81B815E65003EF8BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		07A6BCCA1B815E65003EF8BD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 				07F79A2E1B82675000ABBE20 /* RAMAnimatedTabBarController */,
 				07A6BCC81B815E65003EF8BD /* AppDelegate.swift */,
 				07A6BCCA1B815E65003EF8BD /* ViewController.swift */,
+				072E68B41B8590B30088AE36 /* PlaylistViewController.swift */,
 				07A6BCCC1B815E65003EF8BD /* Main.storyboard */,
 				07A6BCF61B81601E003EF8BD /* PlayerVC.swift */,
 				07A6BCF71B81601E003EF8BD /* PlayerVC.xib */,
@@ -352,6 +355,7 @@
 				07F79A421B82675000ABBE20 /* RAMItemAnimationProtocol.swift in Sources */,
 				07A6BCC91B815E65003EF8BD /* AppDelegate.swift in Sources */,
 				07F79A3F1B82675000ABBE20 /* RAMRotationAnimation.swift in Sources */,
+				072E68B51B8590B30088AE36 /* PlaylistViewController.swift in Sources */,
 				07F79A3D1B82675000ABBE20 /* RAMFrameItemAnimation.swift in Sources */,
 				07F79A3E1B82675000ABBE20 /* RAMFumeAnimation.swift in Sources */,
 				07F79A3C1B82675000ABBE20 /* RAMBounceAnimation.swift in Sources */,
