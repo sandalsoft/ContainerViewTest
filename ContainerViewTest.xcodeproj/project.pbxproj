@@ -20,6 +20,7 @@
 		07A6BCFB1B81601E003EF8BD /* PlayerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07A6BCF71B81601E003EF8BD /* PlayerVC.xib */; };
 		07A6BCFC1B81601E003EF8BD /* PlayerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07A6BCF71B81601E003EF8BD /* PlayerVC.xib */; };
 		07A6BCFD1B81601E003EF8BD /* PlayerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07A6BCF71B81601E003EF8BD /* PlayerVC.xib */; };
+		07CDB69C1B842F5300AE3DD2 /* PlaylistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CDB69B1B842F5300AE3DD2 /* PlaylistViewController.swift */; };
 		07F79A3C1B82675000ABBE20 /* RAMBounceAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F79A311B82675000ABBE20 /* RAMBounceAnimation.swift */; };
 		07F79A3D1B82675000ABBE20 /* RAMFrameItemAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F79A331B82675000ABBE20 /* RAMFrameItemAnimation.swift */; };
 		07F79A3E1B82675000ABBE20 /* RAMFumeAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F79A351B82675000ABBE20 /* RAMFumeAnimation.swift */; };
@@ -62,6 +63,7 @@
 		07A6BCEA1B815E65003EF8BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		07A6BCF61B81601E003EF8BD /* PlayerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerVC.swift; sourceTree = "<group>"; };
 		07A6BCF71B81601E003EF8BD /* PlayerVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerVC.xib; sourceTree = "<group>"; };
+		07CDB69B1B842F5300AE3DD2 /* PlaylistViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaylistViewController.swift; sourceTree = "<group>"; };
 		07F79A311B82675000ABBE20 /* RAMBounceAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMBounceAnimation.swift; sourceTree = "<group>"; };
 		07F79A331B82675000ABBE20 /* RAMFrameItemAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMFrameItemAnimation.swift; sourceTree = "<group>"; };
 		07F79A351B82675000ABBE20 /* RAMFumeAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMFumeAnimation.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				07A6BCC81B815E65003EF8BD /* AppDelegate.swift */,
 				07A6BCCA1B815E65003EF8BD /* ViewController.swift */,
 				07A6BCCC1B815E65003EF8BD /* Main.storyboard */,
+				07CDB69B1B842F5300AE3DD2 /* PlaylistViewController.swift */,
 				07A6BCF61B81601E003EF8BD /* PlayerVC.swift */,
 				07A6BCF71B81601E003EF8BD /* PlayerVC.xib */,
 				07A6BCCF1B815E65003EF8BD /* Assets.xcassets */,
@@ -352,6 +355,7 @@
 				07F79A421B82675000ABBE20 /* RAMItemAnimationProtocol.swift in Sources */,
 				07A6BCC91B815E65003EF8BD /* AppDelegate.swift in Sources */,
 				07F79A3F1B82675000ABBE20 /* RAMRotationAnimation.swift in Sources */,
+				07CDB69C1B842F5300AE3DD2 /* PlaylistViewController.swift in Sources */,
 				07F79A3D1B82675000ABBE20 /* RAMFrameItemAnimation.swift in Sources */,
 				07F79A3E1B82675000ABBE20 /* RAMFumeAnimation.swift in Sources */,
 				07F79A3C1B82675000ABBE20 /* RAMBounceAnimation.swift in Sources */,
@@ -499,7 +503,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ContainerViewTest/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dicksLOL.ContainerViewTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -511,7 +515,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ContainerViewTest/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dicksLOL.ContainerViewTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";

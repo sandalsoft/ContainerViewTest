@@ -11,59 +11,103 @@ import UIKit
 let tabBarOffset: CGFloat = 5.0
 
 class PlayerVC: UIViewController {
-
-
-
-
-  @IBOutlet weak var topPlayerView: UIView!
   
-
+  var topOfFrame: CGFloat = 0.0
+  
+  @IBOutlet weak var topPlayerView: UIView!
+  @IBOutlet var mainView: UIView!
   
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    topOfFrame = -(self.view.frame.height - 65) // -671.0 on 6+
     
-      }
+  }
+  
+
+  @IBAction func showFullPlayerPanGesture(gesture: UIPanGestureRecognizer) {
+    //swipe up
+
+    let translation = gesture.translationInView(self.view)
+    print(translation)
+    
+    if (gesture.state == UIGestureRecognizerState.Ended) {
+      if (translation.y > CGFloat(-100.0)) {
+        resetMiniPlayer()
+      } else {
+        showFullPlayer()
+      }//if
+    } else { //if state
+      self.view.frame.origin.y = translation.y
+    }
+  }//showplayergesture
+  
+  
+  @IBAction func hideFullPlayerGesture(gesture: UIPanGestureRecognizer) {
+    //swipe down
+    let point = gesture.locationInView(self.view)
+    print("point: \(point)")
+    let translation = gesture.translationInView(self.view)
+    print("translation: \(translation)")
+    if (gesture.state == UIGestureRecognizerState.Ended) {
+      if (translation.y > CGFloat(20.0)) {
+        resetMiniPlayer()
+      } else {
+        showFullPlayer()
+      }//if
+    }//if state
+  }//func
+  
+  func showFullPlayer() {
+    UIView.animateWithDuration(0.5) { () -> Void in
+      self.view.frame.origin.y = self.topOfFrame
+      self.tabBarController?.tabBar.alpha = 0
+      self.topPlayerView?.alpha = 0
+    }//animate
+  }
+  
+  func resetMiniPlayer() {
+    print("resetting miniplayer")
+    UIView.animateWithDuration(0.25) { () -> Void in
+      self.view.frame.origin.y = 0
+      self.tabBarController?.tabBar.alpha = 1.0
+      self.topPlayerView?.alpha = 1.0
+    }//animate
+
+  }
+  
+
+//  
+//  
+//  @IBAction func panUp(gesture: UIPanGestureRecognizer) {
+//    let translation = gesture.translationInView(mainView)
+//    
+//    if (gesture.state == UIGestureRecognizerState.Ended) {
+//      if (translation.y > CGFloat(-100.0)) {
+//        resetMiniPlayer()
+//      } else {
+//        showFullPlayer()
+//      }//if
+//    }//if state
+
+//    // if pan is more than 50 points, drag the frame
+//    if (translation.y > CGFloat(-100.0)) {
+//      self.view.frame.origin.y = translation.y
+//    } else {
+//      UIView.animateWithDuration(0.5) { () -> Void in
+//        self.view.frame.origin.y = self.topOfFrame
+//        self.tabBarController?.tabBar.alpha = 0
+//        self.topPlayerView?.alpha = 0
+//      }//animate
+//    }// if translation
+//  }//panVC
+
+  
   override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-  @IBAction func panDown(sender: UIPanGestureRecognizer) {
-    let velocity = sender.velocityInView(self.view)
-    
-    if (velocity.y > 0) {
-      UIView.animateWithDuration(0.5) { () -> Void in
-        self.view.frame.origin.y = 0
-        self.tabBarController?.tabBar.alpha = 1.0
-        self.topPlayerView?.alpha = 1.0
-      }//animate
-    }//if
-  }//panDown
-  
-  @IBAction func panVC(sender: UIPanGestureRecognizer) {
-    let velocity = sender.velocityInView(self.view)
-    
-    if (velocity.y < 0) {
-      print("pan up")
-      UIView.animateWithDuration(0.5) { () -> Void in
-        self.view.frame.origin.y = -(self.view.frame.height - 65)
-        self.tabBarController?.tabBar.alpha = 0
-        self.topPlayerView?.alpha = 0
-      }//animate
-    }//if
-  }//panVC
-  
-  
+    super.didReceiveMemoryWarning()
+    // Dispose of any resources that can be recreated.
+  }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+  
 
 }

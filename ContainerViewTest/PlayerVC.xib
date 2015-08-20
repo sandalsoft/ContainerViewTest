@@ -2,16 +2,17 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8173.3" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8142"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="HelveticaNeueLights.ttc">
             <string>HelveticaNeue-LightItalic</string>
+            <string>HelveticaNeue-Light</string>
         </mutableArray>
     </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PlayerVC" customModule="ContainerViewTest" customModuleProvider="target">
             <connections>
+                <outlet property="mainView" destination="i5M-Pr-FkT" id="1EH-WD-APB"/>
                 <outlet property="topPlayerView" destination="pDN-PK-VcY" id="sjF-fK-JVG"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -22,93 +23,144 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pDN-PK-VcY" userLabel="TopPlayerView">
-                    <rect key="frame" x="0.0" y="0.0" width="600" height="28"/>
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="40"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="urc-ZD-Ey5">
-                            <rect key="frame" x="8" y="1" width="25" height="25"/>
-                            <state key="normal" image="Play"/>
-                            <state key="selected" image="Pause"/>
-                        </button>
-                        <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.23999999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="05G-Eb-AGg">
-                            <rect key="frame" x="0.0" y="26" width="600" height="2"/>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="avj-iE-zfK">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="40"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="urc-ZD-Ey5">
+                                    <rect key="frame" x="0.0" y="0.0" width="32" height="40"/>
+                                    <state key="normal" image="Play Filled"/>
+                                    <state key="selected" image="Play Filled"/>
+                                </button>
+                                <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="xTw-8f-M20">
+                                    <rect key="frame" x="166" y="0.0" width="268.5" height="40"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Epispde 153:  Federal Reserve Miscues on Stimulus" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CWD-xw-bX7">
+                                            <rect key="frame" x="0.0" y="0.0" width="268.5" height="19.5"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-LightItalic" family="Helvetica Neue" pointSize="12"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Econtalk" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ydn-uS-1Px">
+                                            <rect key="frame" x="0.0" y="19.5" width="268.5" height="20.5"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="12"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eQu-lB-8x7">
+                                    <rect key="frame" x="568" y="0.0" width="32" height="40"/>
+                                    <state key="normal" image="Collapse Arrow"/>
+                                </button>
+                            </subviews>
                             <constraints>
-                                <constraint firstAttribute="height" constant="2" id="zKn-A1-s8v"/>
+                                <constraint firstAttribute="height" constant="40" id="n2s-s2-qJg"/>
                             </constraints>
-                            <color key="progressTintColor" red="1" green="0.96696235726223212" blue="0.11252368284245662" alpha="1" colorSpace="calibratedRGB"/>
-                            <color key="trackTintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        </stackView>
+                        <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.23999999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="05G-Eb-AGg">
+                            <rect key="frame" x="0.0" y="38" width="600" height="2"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="2" id="J5I-9P-Lhy"/>
+                            </constraints>
+                            <color key="progressTintColor" red="1" green="0.050057133080000003" blue="0.11301050310000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="trackTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         </progressView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Epispde 153:  Federal Reserve Miscues on Stimulus" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CWD-xw-bX7">
-                            <rect key="frame" x="94" y="3" width="412" height="21"/>
-                            <fontDescription key="fontDescription" name="HelveticaNeue-LightItalic" family="Helvetica Neue" pointSize="12"/>
-                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
                     </subviews>
                     <color key="backgroundColor" red="0.88995524749999999" green="0.9008443813" blue="0.89963904149999996" alpha="1" colorSpace="calibratedRGB"/>
                     <gestureRecognizers/>
                     <constraints>
-                        <constraint firstItem="urc-ZD-Ey5" firstAttribute="leading" secondItem="pDN-PK-VcY" secondAttribute="leadingMargin" id="BBB-Ns-WPz"/>
-                        <constraint firstItem="05G-Eb-AGg" firstAttribute="leading" secondItem="pDN-PK-VcY" secondAttribute="leading" id="IUE-ba-Ryi"/>
-                        <constraint firstAttribute="bottom" secondItem="05G-Eb-AGg" secondAttribute="bottom" id="eMz-CH-DvB"/>
-                        <constraint firstAttribute="height" constant="28" id="kAr-B7-hPD"/>
-                        <constraint firstItem="urc-ZD-Ey5" firstAttribute="centerY" secondItem="pDN-PK-VcY" secondAttribute="centerY" id="xI4-DX-vOL"/>
-                        <constraint firstAttribute="trailing" secondItem="05G-Eb-AGg" secondAttribute="trailing" id="zpC-yM-cuG"/>
+                        <constraint firstAttribute="trailing" secondItem="avj-iE-zfK" secondAttribute="trailing" id="Gsn-ec-4d9"/>
+                        <constraint firstAttribute="bottom" secondItem="05G-Eb-AGg" secondAttribute="bottom" id="Uue-Mn-7bR"/>
+                        <constraint firstItem="avj-iE-zfK" firstAttribute="leading" secondItem="pDN-PK-VcY" secondAttribute="leading" id="YcW-jp-heH"/>
+                        <constraint firstItem="05G-Eb-AGg" firstAttribute="leading" secondItem="pDN-PK-VcY" secondAttribute="leading" id="dU9-CP-oOh"/>
+                        <constraint firstAttribute="trailing" secondItem="05G-Eb-AGg" secondAttribute="trailing" id="efV-Os-MkR"/>
+                        <constraint firstItem="avj-iE-zfK" firstAttribute="top" secondItem="pDN-PK-VcY" secondAttribute="top" id="hQy-ud-FmT"/>
+                        <constraint firstAttribute="height" constant="40" id="i6X-xz-FUd"/>
                     </constraints>
                     <connections>
                         <outletCollection property="gestureRecognizers" destination="ljZ-41-HlD" appends="YES" id="CQg-07-MXd"/>
                     </connections>
                 </view>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="podcast" translatesAutoresizingMaskIntoConstraints="NO" id="iVs-nU-5NJ">
-                    <rect key="frame" x="175" y="175" width="250" height="250"/>
-                </imageView>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RV7-IA-m93" userLabel="BottomPlayerView">
-                    <rect key="frame" x="0.0" y="515" width="600" height="85"/>
-                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="32w-k3-w0o" userLabel="FullPlayerView">
+                    <rect key="frame" x="0.0" y="97" width="600" height="503"/>
+                    <subviews>
+                        <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="podcast" translatesAutoresizingMaskIntoConstraints="NO" id="iVs-nU-5NJ" userLabel="podcastImage">
+                            <rect key="frame" x="175" y="97" width="250" height="250"/>
+                            <gestureRecognizers/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="250" id="B9e-GV-kOV"/>
+                                <constraint firstAttribute="height" constant="250" id="NtE-Tv-B2p"/>
+                            </constraints>
+                        </imageView>
+                        <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RV7-IA-m93" userLabel="BottomPlayerView">
+                            <rect key="frame" x="0.0" y="418" width="600" height="85"/>
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <gestureRecognizers/>
+                            <constraints>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="85" id="gTG-g0-0KX"/>
+                                <constraint firstAttribute="height" constant="85" id="k60-Yt-nzB"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GwM-qs-3Yl">
+                            <rect key="frame" x="277" y="20" width="46" height="30"/>
+                            <state key="normal" title="Button"/>
+                            <connections>
+                                <action selector="press:" destination="-1" eventType="touchUpInside" id="TYu-62-clF"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <gestureRecognizers/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="85" id="k60-Yt-nzB"/>
+                        <constraint firstItem="GwM-qs-3Yl" firstAttribute="centerX" secondItem="32w-k3-w0o" secondAttribute="centerX" id="7qH-of-FBz"/>
+                        <constraint firstItem="GwM-qs-3Yl" firstAttribute="top" secondItem="32w-k3-w0o" secondAttribute="top" constant="20" id="E9e-LM-YhD"/>
+                        <constraint firstItem="GwM-qs-3Yl" firstAttribute="centerX" secondItem="RV7-IA-m93" secondAttribute="centerX" id="MaY-ol-jYI"/>
+                        <constraint firstItem="RV7-IA-m93" firstAttribute="top" secondItem="iVs-nU-5NJ" secondAttribute="bottom" constant="71" id="R0N-mH-Gk9"/>
+                        <constraint firstItem="iVs-nU-5NJ" firstAttribute="centerX" secondItem="RV7-IA-m93" secondAttribute="centerX" id="wWd-GQ-cxN"/>
+                        <constraint firstItem="iVs-nU-5NJ" firstAttribute="top" secondItem="GwM-qs-3Yl" secondAttribute="bottom" constant="47" id="xRg-tE-6at"/>
                     </constraints>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="Oiu-S5-8We" appends="YES" id="t8F-lt-RVy"/>
+                    </connections>
                 </view>
-                <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="s13-57-TH0">
-                    <rect key="frame" x="147" y="90" width="196" height="37"/>
-                </pageControl>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O8Y-Ve-3hW">
+                    <rect key="frame" x="277" y="48" width="46" height="30"/>
+                    <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="durr:" destination="-1" eventType="touchUpInside" id="5oe-8L-okk"/>
+                    </connections>
+                </button>
             </subviews>
             <gestureRecognizers/>
             <constraints>
-                <constraint firstItem="pDN-PK-VcY" firstAttribute="trailing" secondItem="RV7-IA-m93" secondAttribute="trailing" id="2PO-rp-VIP"/>
-                <constraint firstItem="pDN-PK-VcY" firstAttribute="leading" secondItem="RV7-IA-m93" secondAttribute="leading" id="8Qq-nu-Tcb"/>
-                <constraint firstItem="iVs-nU-5NJ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="175" id="Bkw-e0-l9l"/>
-                <constraint firstItem="iVs-nU-5NJ" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="D3W-TC-IlA"/>
-                <constraint firstAttribute="bottom" secondItem="RV7-IA-m93" secondAttribute="bottom" id="DSd-3W-VD6"/>
-                <constraint firstItem="RV7-IA-m93" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Ef8-m5-JKF"/>
-                <constraint firstAttribute="trailing" secondItem="iVs-nU-5NJ" secondAttribute="trailing" constant="175" id="L6Q-24-nnC"/>
-                <constraint firstItem="pDN-PK-VcY" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="SDk-uM-aTS"/>
-                <constraint firstItem="RV7-IA-m93" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Xcf-HK-nrE"/>
-                <constraint firstAttribute="trailing" secondItem="RV7-IA-m93" secondAttribute="trailing" id="aiI-SC-UEk"/>
-                <constraint firstItem="RV7-IA-m93" firstAttribute="top" secondItem="iVs-nU-5NJ" secondAttribute="bottom" constant="90" id="dxz-Zc-pGQ"/>
-                <constraint firstAttribute="bottom" secondItem="pDN-PK-VcY" secondAttribute="bottom" constant="572" id="e9m-oZ-Jka"/>
-                <constraint firstItem="iVs-nU-5NJ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="jhR-LS-8aZ"/>
+                <constraint firstItem="32w-k3-w0o" firstAttribute="trailing" secondItem="pDN-PK-VcY" secondAttribute="trailing" id="D9H-gE-MCS"/>
+                <constraint firstItem="pDN-PK-VcY" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Rbq-sT-8Qo"/>
+                <constraint firstAttribute="trailing" secondItem="pDN-PK-VcY" secondAttribute="trailing" id="U2Y-L7-trC"/>
+                <constraint firstAttribute="bottom" secondItem="32w-k3-w0o" secondAttribute="bottom" id="Vap-kq-xwG"/>
+                <constraint firstItem="32w-k3-w0o" firstAttribute="leading" secondItem="pDN-PK-VcY" secondAttribute="leading" id="mPz-GI-acI"/>
+                <constraint firstItem="pDN-PK-VcY" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="mV7-R5-8sh"/>
+                <constraint firstItem="32w-k3-w0o" firstAttribute="top" secondItem="pDN-PK-VcY" secondAttribute="bottom" constant="57" id="nOw-Un-6CU"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <connections>
-                <outletCollection property="gestureRecognizers" destination="Y8u-lK-eLo" appends="YES" id="bZV-Iz-uI1"/>
-            </connections>
             <point key="canvasLocation" x="431" y="302"/>
         </view>
-        <panGestureRecognizer minimumNumberOfTouches="1" id="ljZ-41-HlD">
+        <panGestureRecognizer minimumNumberOfTouches="1" id="ljZ-41-HlD" userLabel="Show Full Player Pan Gesture Recognizer">
             <connections>
-                <action selector="panVC:" destination="-1" id="fbi-es-dqC"/>
+                <action selector="showFullPlayerPanGesture:" destination="-1" id="UOe-3A-lUh"/>
             </connections>
         </panGestureRecognizer>
-        <panGestureRecognizer minimumNumberOfTouches="1" id="Y8u-lK-eLo">
+        <panGestureRecognizer minimumNumberOfTouches="1" id="Oiu-S5-8We" userLabel="HideFullPlayer Pan Gesture Recognizer">
             <connections>
-                <action selector="panDown:" destination="-1" id="8RQ-xa-HSC"/>
+                <action selector="hideFullPlayerGesture:" destination="-1" id="egk-K3-A5Z"/>
             </connections>
         </panGestureRecognizer>
     </objects>
     <resources>
-        <image name="Pause" width="25" height="25"/>
-        <image name="Play" width="25" height="25"/>
+        <image name="Collapse Arrow" width="32" height="32"/>
+        <image name="Play Filled" width="32" height="32"/>
         <image name="podcast" width="600" height="600"/>
     </resources>
 </document>
