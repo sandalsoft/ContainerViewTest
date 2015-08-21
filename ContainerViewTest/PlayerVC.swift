@@ -54,28 +54,31 @@ class PlayerVC: UIViewController, UIGestureRecognizerDelegate {
   }//showplayergesture
   
   func hideFullPlayerGesture(gesture: UIPanGestureRecognizer) {
-    print("hidePlayerGesture")
+
     //swipe down
+    print("hidePlayerGesture")
     let point = gesture.locationInView(self.view)
     print("point: \(point)")
     let translation = gesture.translationInView(self.view)
     print("translation: \(translation)")
+
     if (gesture.state == UIGestureRecognizerState.Ended) {
       if (translation.y > CGFloat(20.0)) {
         resetMiniPlayer(gesture)
       } else {
         showFullPlayer(gesture)
-      }//if
+      }//if y> 20
     }//if state
   }//func
   
   func showFullPlayer(gesture: UIPanGestureRecognizer) {
     UIView.animateWithDuration(0.5) { () -> Void in
-      let fuckingRealView = self.view.superview
-        fuckingRealView?.backgroundColor = UIColor.redColor()
-//      fuckingRealView?.frame.origin.y = self.topOfFrameYCoord
+      let containerView = self.view.superview
+      containerView?.backgroundColor = UIColor.redColor()
       
       self.view.backgroundColor = UIColor.yellowColor()
+      
+//      containerView?.frame.origin.y = self.topOfFrameYCoord
       self.view.frame.origin.y = self.topOfFrameYCoord
       self.tabBarController?.tabBar.alpha = 0
       self.topPlayerView?.alpha = 1
