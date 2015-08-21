@@ -15,15 +15,15 @@ class PlayerVC: UIViewController {
   var topOfFrame: CGFloat = 0.0
   
   @IBOutlet weak var topPlayerView: UIView!
-  @IBOutlet var mainView: UIView!
+
   
   @IBOutlet weak var podcastImageView: UIImageView!
   
   override func viewDidLoad() {
     super.viewDidLoad()
     topOfFrame = -(self.view.frame.height - 65) // -671.0 on 6+
-    self.mainView.userInteractionEnabled = true
-    self.podcastImageView.userInteractionEnabled = true
+
+    
     
   }
   
