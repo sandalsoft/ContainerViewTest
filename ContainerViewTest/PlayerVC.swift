@@ -10,24 +10,21 @@ import UIKit
 
 let tabBarOffset: CGFloat = 5.0
 
-class PlayerVC: UIViewController {
+class PlayerVC: UIViewController    {
   
   var topOfFrame: CGFloat = 0.0
   
   @IBOutlet weak var topPlayerView: UIView!
-
-  
   @IBOutlet weak var podcastImageView: UIImageView!
+  
+  var tapGesture: UITapGestureRecognizer?
   
   override func viewDidLoad() {
     super.viewDidLoad()
     topOfFrame = -(self.view.frame.height - 65) // -671.0 on 6+
-
-    
     
   }
   
-
   @IBAction func showFullPlayerPanGesture(gesture: UIPanGestureRecognizer) {
     //swipe up
 
@@ -62,9 +59,16 @@ class PlayerVC: UIViewController {
   
   func showFullPlayer() {
     UIView.animateWithDuration(0.5) { () -> Void in
-self.view.clipsToBounds = true
-//      self.view.frame.origin.y = self.topOfFrame
+      
+      let containerView = self.view.superview
+      containerView?.backgroundColor = UIColor.redColor()
 
+      // WHAT TO DO WITH THIS FUCKER?
+//      self.view.clipsToBounds = true
+      
+      //put playerview to top 
+      self.view.frame.origin.y = self.topOfFrame
+      
       self.tabBarController?.tabBar.alpha = 0
       self.topPlayerView?.alpha = 1
     }//animate
@@ -83,31 +87,6 @@ self.view.clipsToBounds = true
   @IBAction func bottomGrayBoxHideGesture(gesture: UIPanGestureRecognizer) {
     print(gesture)
   }
-
-//  
-//  
-//  @IBAction func panUp(gesture: UIPanGestureRecognizer) {
-//    let translation = gesture.translationInView(mainView)
-//    
-//    if (gesture.state == UIGestureRecognizerState.Ended) {
-//      if (translation.y > CGFloat(-100.0)) {
-//        resetMiniPlayer()
-//      } else {
-//        showFullPlayer()
-//      }//if
-//    }//if state
-
-//    // if pan is more than 50 points, drag the frame
-//    if (translation.y > CGFloat(-100.0)) {
-//      self.view.frame.origin.y = translation.y
-//    } else {
-//      UIView.animateWithDuration(0.5) { () -> Void in
-//        self.view.frame.origin.y = self.topOfFrame
-//        self.tabBarController?.tabBar.alpha = 0
-//        self.topPlayerView?.alpha = 0
-//      }//animate
-//    }// if translation
-//  }//panVC
 
   
   override func didReceiveMemoryWarning() {

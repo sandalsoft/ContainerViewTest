@@ -95,9 +95,6 @@
                         <constraint firstAttribute="height" constant="250" id="Wdu-4n-7zq"/>
                         <constraint firstAttribute="width" constant="250" id="viW-hH-rgZ"/>
                     </constraints>
-                    <connections>
-                        <outletCollection property="gestureRecognizers" destination="gNT-vz-lXy" appends="YES" id="Fyd-zI-6l2"/>
-                    </connections>
                 </imageView>
             </subviews>
             <gestureRecognizers/>
@@ -114,6 +111,9 @@
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outletCollection property="gestureRecognizers" destination="gNT-vz-lXy" appends="YES" id="eWD-BE-oQh"/>
+            </connections>
             <point key="canvasLocation" x="431" y="302"/>
         </view>
         <panGestureRecognizer minimumNumberOfTouches="1" id="ljZ-41-HlD" userLabel="Show Full Player Pan Gesture Recognizer">
