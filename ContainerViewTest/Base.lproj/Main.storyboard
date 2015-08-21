@@ -12,12 +12,12 @@
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" userLabel="PlaylistView">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NUR-AM-aC7">
-                                <rect key="frame" x="0.0" y="495" width="600" height="545"/>
+                            <containerView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NUR-AM-aC7" userLabel="PlayerContainerView">
+                                <rect key="frame" x="0.0" y="515" width="600" height="545"/>
                                 <connections>
                                     <segue destination="z0R-sV-w7y" kind="embed" id="e9V-ps-zYT"/>
                                 </connections>
