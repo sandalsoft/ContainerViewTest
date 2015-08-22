@@ -125,14 +125,13 @@
                 <action selector="showFullPlayerPanGesture:" destination="-1" id="UOe-3A-lUh"/>
             </connections>
         </panGestureRecognizer>
-<<<<<<< HEAD
-=======
+
         <panGestureRecognizer minimumNumberOfTouches="1" id="gNT-vz-lXy" userLabel="Hide player Pan Gesture">
             <connections>
                 <action selector="hidFullPlayerGesture:" destination="-1" id="NPf-1M-m3t"/>
             </connections>
         </panGestureRecognizer>
->>>>>>> cleanedUp
+
     </objects>
     <resources>
         <image name="Collapse Arrow" width="32" height="32"/>
