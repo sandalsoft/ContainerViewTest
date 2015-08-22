@@ -12,7 +12,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PlayerVC" customModule="ContainerViewTest" customModuleProvider="target">
             <connections>
-                <outlet property="mainView" destination="i5M-Pr-FkT" id="1EH-WD-APB"/>
                 <outlet property="podcastImageView" destination="iVs-nU-5NJ" id="q8d-lO-rjH"/>
                 <outlet property="topPlayerView" destination="pDN-PK-VcY" id="sjF-fK-JVG"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -116,6 +115,9 @@
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outletCollection property="gestureRecognizers" destination="gNT-vz-lXy" appends="YES" id="eWD-BE-oQh"/>
+            </connections>
             <point key="canvasLocation" x="431" y="302"/>
         </view>
         <panGestureRecognizer minimumNumberOfTouches="1" id="ljZ-41-HlD" userLabel="Show Full Player Pan Gesture Recognizer">
@@ -123,6 +125,14 @@
                 <action selector="showFullPlayerPanGesture:" destination="-1" id="UOe-3A-lUh"/>
             </connections>
         </panGestureRecognizer>
+<<<<<<< HEAD
+=======
+        <panGestureRecognizer minimumNumberOfTouches="1" id="gNT-vz-lXy" userLabel="Hide player Pan Gesture">
+            <connections>
+                <action selector="hidFullPlayerGesture:" destination="-1" id="NPf-1M-m3t"/>
+            </connections>
+        </panGestureRecognizer>
+>>>>>>> cleanedUp
     </objects>
     <resources>
         <image name="Collapse Arrow" width="32" height="32"/>
