@@ -14,7 +14,7 @@ class PlaylistViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-      let containerViewOffset: CGFloat = -189.0
+      let containerViewOffset: CGFloat = -89.0
       self.view.addConstraint(NSLayoutConstraint(item: containerView,
         attribute: NSLayoutAttribute.Top,
         relatedBy: NSLayoutRelation.Equal,
