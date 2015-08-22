@@ -10,18 +10,10 @@ import UIKit
 
 let tabBarOffset: CGFloat = 5.0
 
-<<<<<<< HEAD
-class PlayerVC: UIViewController, UIGestureRecognizerDelegate {
-  
-  var topOfFrameYCoord: CGFloat = 0.0
-  
-  var hidePlayerPanGestureRecognizer: UIPanGestureRecognizer?
-=======
 class PlayerVC: UIViewController    {
   
   var topOfFrame: CGFloat = 0.0
   var containerViewTop: CGFloat = 0.0
->>>>>>> cleanedUp
   
   
   @IBOutlet weak var topPlayerView: UIView!
@@ -31,16 +23,7 @@ class PlayerVC: UIViewController    {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-<<<<<<< HEAD
-    topOfFrameYCoord = -(self.view.frame.height - 65) // -671.0 on 6+
-    hidePlayerPanGestureRecognizer?.delegate = self
-    hidePlayerPanGestureRecognizer = UIPanGestureRecognizer(target: self, action: Selector("hideFullPlayerGesture:"))
-    
-    self.view.autoresizingMask = UIViewAutoresizing.FlexibleBottomMargin
-    
-=======
     topOfFrame = -(self.view.frame.height - 65) // -671.0 on 6+
->>>>>>> cleanedUp
   }
   
   override func viewDidAppear(animated: Bool) {
@@ -52,25 +35,12 @@ class PlayerVC: UIViewController    {
   @IBAction func showFullPlayerPanGesture(gesture: UIPanGestureRecognizer) {
     //swipe up
     let containerY = self.view.superview!.frame.origin.y
-    let translation = gesture.translationInView(self.view)
+    let translation = gesture.translationInView(self.view.superview!)
     
+    print("containerY: \(containerY)   |    translationY \(translation.y)")
     if (gesture.state == UIGestureRecognizerState.Ended) {
-<<<<<<< HEAD
-      if (translation.y > CGFloat(-100.0)) {
-        resetMiniPlayer(gesture)
-      } else {
-        showFullPlayer(gesture)
-      }//if
-      
-      gesture.setTranslation(CGPointMake(0, 0), inView:self.view)
-    } else { //if state
-      self.view.frame.origin.y = translation.y
-    }
-    
-    
-    
-=======
-      if (containerY < CGFloat(550.0)) {
+      if (containerY < 550.0) {
+        print("less than 550")
         showFullPlayer()
       } else {
         resetMiniPlayer()
@@ -79,82 +49,53 @@ class PlayerVC: UIViewController    {
       self.view.superview!.frame.origin.y = self.view.superview!.frame.origin.y + translation.y
       gesture.setTranslation(CGPointZero, inView: self.view.superview)
     }//if state
->>>>>>> cleanedUp
   }//showplayergesture
   
-  func hideFullPlayerGesture(gesture: UIPanGestureRecognizer) {
-
-    //swipe down
-    print("hidePlayerGesture")
-    let point = gesture.locationInView(self.view)
-    print("point: \(point)")
-    let translation = gesture.translationInView(self.view)
-    print("translation: \(translation)")
-<<<<<<< HEAD
-
-=======
-    
-    
->>>>>>> cleanedUp
+  
+  func showFullPlayer() {
+    print("showFullPlayer")
+    UIView.animateWithDuration(0.5) { () -> Void in
+      self.view.superview!.frame.origin.y = self.containerViewTop - self.view.frame.height
+      
+      self.podcastImageView.alpha = 1
+      self.tabBarController?.tabBar.alpha = 0
+      self.topPlayerView?.alpha = 0
+    }//animate
+  }
+ 
+  
+/*******************************************************/
+/*******************************************************/
+/*******************************************************/
+  
+  @IBAction func hidFullPlayerGesture(gesture: UIPanGestureRecognizer) {
+    let containerY = self.view.superview!.frame.origin.y
+    let translation = gesture.translationInView(self.view.superview!)
+  
+    print("containerY: \(containerY)   |    translationY \(translation.y)")
     if (gesture.state == UIGestureRecognizerState.Ended) {
-      if (translation.y > CGFloat(20.0)) {
-        resetMiniPlayer(gesture)
+      if (containerY > 150.0) {
+        resetMiniPlayer()
       } else {
-        showFullPlayer(gesture)
-      }//if y> 20
+        showFullPlayer()
+      }//if
     }//if state
+    self.view.superview!.frame.origin.y = self.view.superview!.frame.origin.y + translation.y
+    gesture.setTranslation(CGPointZero, inView: self.view.superview)
   }//func
   
-  func showFullPlayer(gesture: UIPanGestureRecognizer) {
-    UIView.animateWithDuration(0.5) { () -> Void in
-<<<<<<< HEAD
-      let containerView = self.view.superview
-      containerView?.backgroundColor = UIColor.redColor()
-      
-      self.view.backgroundColor = UIColor.yellowColor()
-      
-//      containerView?.frame.origin.y = self.topOfFrameYCoord
-      self.view.frame.origin.y = self.topOfFrameYCoord
-=======
-      self.view.superview!.frame.origin.y = self.containerViewTop
-      
->>>>>>> cleanedUp
-      self.tabBarController?.tabBar.alpha = 0
-      self.topPlayerView?.alpha = 1
-    }//animate
-//    self.view.superview?.addGestureRecognizer(hidePlayerPanGestureRecognizer!)
-    self.view.addGestureRecognizer(hidePlayerPanGestureRecognizer!)
-    
-//      self.view.addGestureRecognizer(hidePlayerPanGestureRecognizer!)
-
-  }
-  
-  func resetMiniPlayer(gesture: UIPanGestureRecognizer) {
+  func resetMiniPlayer() {
     print("resetting miniplayer")
     UIView.animateWithDuration(0.25) { () -> Void in
 
       self.view.superview?.frame.origin.y = self.containerViewTop
-      
-      
+      self.podcastImageView.alpha = 0.0
       self.tabBarController?.tabBar.alpha = 1.0
       self.topPlayerView?.alpha = 1.0
     }//animate
 
   }
-<<<<<<< HEAD
 
-=======
-  
-  @IBAction func bottomGrayBoxHideGesture(gesture: UIPanGestureRecognizer) {
-    print(gesture)
-  }
-
-  
->>>>>>> cleanedUp
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
-  }
 
   
 
