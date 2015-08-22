@@ -13,6 +13,8 @@ let tabBarOffset: CGFloat = 5.0
 class PlayerVC: UIViewController    {
   
   var topOfFrame: CGFloat = 0.0
+  var containerViewTop: CGFloat = 0.0
+  
   
   @IBOutlet weak var topPlayerView: UIView!
   @IBOutlet weak var podcastImageView: UIImageView!
@@ -22,23 +24,29 @@ class PlayerVC: UIViewController    {
   override func viewDidLoad() {
     super.viewDidLoad()
     topOfFrame = -(self.view.frame.height - 65) // -671.0 on 6+
-    
+  }
+  
+  override func viewDidAppear(animated: Bool) {
+    containerViewTop = (self.view.superview?.frame.origin.y)!
+    print("containerViewTop: \(containerViewTop)")
+
   }
   
   @IBAction func showFullPlayerPanGesture(gesture: UIPanGestureRecognizer) {
     //swipe up
-
+    let containerY = self.view.superview!.frame.origin.y
     let translation = gesture.translationInView(self.view)
     
     if (gesture.state == UIGestureRecognizerState.Ended) {
-      if (translation.y > CGFloat(-100.0)) {
-        resetMiniPlayer()
-      } else {
+      if (containerY < CGFloat(550.0)) {
         showFullPlayer()
+      } else {
+        resetMiniPlayer()
       }//if
-    } else { //if state
-      self.view.frame.origin.y = translation.y
-    }
+    } else {
+      self.view.superview!.frame.origin.y = self.view.superview!.frame.origin.y + translation.y
+      gesture.setTranslation(CGPointZero, inView: self.view.superview)
+    }//if state
   }//showplayergesture
   
   @IBAction func hidFullPlayerGesture(gesture: UIPanGestureRecognizer) {
@@ -48,6 +56,8 @@ class PlayerVC: UIViewController    {
     print("point: \(point)")
     let translation = gesture.translationInView(self.view)
     print("translation: \(translation)")
+    
+    
     if (gesture.state == UIGestureRecognizerState.Ended) {
       if (translation.y > CGFloat(20.0)) {
         resetMiniPlayer()
@@ -59,15 +69,7 @@ class PlayerVC: UIViewController    {
   
   func showFullPlayer() {
     UIView.animateWithDuration(0.5) { () -> Void in
-      
-      let containerView = self.view.superview
-      containerView?.backgroundColor = UIColor.redColor()
-
-      // WHAT TO DO WITH THIS FUCKER?
-//      self.view.clipsToBounds = true
-      
-      //put playerview to top 
-      self.view.frame.origin.y = self.topOfFrame
+      self.view.superview!.frame.origin.y = self.containerViewTop
       
       self.tabBarController?.tabBar.alpha = 0
       self.topPlayerView?.alpha = 1
@@ -77,7 +79,10 @@ class PlayerVC: UIViewController    {
   func resetMiniPlayer() {
     print("resetting miniplayer")
     UIView.animateWithDuration(0.25) { () -> Void in
-      self.view.frame.origin.y = 0
+
+      self.view.superview?.frame.origin.y = self.containerViewTop
+      
+      
       self.tabBarController?.tabBar.alpha = 1.0
       self.topPlayerView?.alpha = 1.0
     }//animate
