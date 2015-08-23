@@ -7,8 +7,8 @@
         <mutableArray key="HelveticaNeueLights.ttc">
             <string>HelveticaNeue-LightItalic</string>
             <string>HelveticaNeue-Light</string>
-            <string>HelveticaNeue-LightItalic</string>
             <string>HelveticaNeue-Light</string>
+            <string>HelveticaNeue-LightItalic</string>
         </mutableArray>
     </customFonts>
     <objects>
@@ -25,28 +25,33 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pDN-PK-VcY" userLabel="TopPlayerView">
-                    <rect key="frame" x="0.0" y="0.0" width="600" height="40"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pDN-PK-VcY" userLabel="MiniPlayerView">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="50"/>
                     <subviews>
+                        <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.23999999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="05G-Eb-AGg" userLabel="mini_progress">
+                            <rect key="frame" x="0.0" y="48" width="600" height="2"/>
+                            <color key="progressTintColor" red="1" green="0.050057133080000003" blue="0.11301050310000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="trackTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        </progressView>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="avj-iE-zfK" userLabel="mini_acrossStack">
-                            <rect key="frame" x="0.0" y="0.0" width="600" height="40"/>
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="48"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="urc-ZD-Ey5" userLabel="mini_playButton">
-                                    <rect key="frame" x="0.0" y="0.0" width="50" height="40"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="48"/>
                                     <state key="normal" image="Play Filled_50"/>
                                     <state key="selected" image="Play Filled"/>
                                 </button>
                                 <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="xTw-8f-M20" userLabel="mini_trackNamesStack">
-                                    <rect key="frame" x="175" y="0.0" width="268.5" height="40"/>
+                                    <rect key="frame" x="175" y="0.0" width="268.5" height="48"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Epispde 153:  Federal Reserve Miscues on Stimulus" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CWD-xw-bX7">
-                                            <rect key="frame" x="0.0" y="0.0" width="268.5" height="19.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="268.5" height="23.5"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-LightItalic" family="Helvetica Neue" pointSize="12"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Econtalk" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ydn-uS-1Px">
-                                            <rect key="frame" x="0.0" y="19.5" width="268.5" height="20.5"/>
+                                            <rect key="frame" x="0.0" y="23.5" width="268.5" height="24.5"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="12"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -54,58 +59,36 @@
                                     </subviews>
                                 </stackView>
                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eQu-lB-8x7" userLabel="mini_drawerButton">
-                                    <rect key="frame" x="568" y="0.0" width="32" height="40"/>
+                                    <rect key="frame" x="568" y="0.0" width="32" height="48"/>
                                     <state key="normal" image="Collapse Arrow"/>
                                 </button>
                             </subviews>
                             <constraints>
-                                <constraint firstAttribute="height" constant="40" id="n2s-s2-qJg"/>
+                                <constraint firstAttribute="height" constant="48" id="T5Y-Wm-b6w"/>
                             </constraints>
                         </stackView>
-                        <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.23999999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="05G-Eb-AGg" userLabel="mini_progress">
-                            <rect key="frame" x="0.0" y="38" width="600" height="2"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="2" id="J5I-9P-Lhy"/>
-                            </constraints>
-                            <color key="progressTintColor" red="1" green="0.050057133080000003" blue="0.11301050310000001" alpha="1" colorSpace="calibratedRGB"/>
-                            <color key="trackTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                        </progressView>
                     </subviews>
                     <color key="backgroundColor" red="0.88995524749999999" green="0.9008443813" blue="0.89963904149999996" alpha="1" colorSpace="calibratedRGB"/>
                     <accessibility key="accessibilityConfiguration" identifier="TopPlayerView"/>
                     <gestureRecognizers/>
                     <constraints>
-                        <constraint firstAttribute="trailing" secondItem="avj-iE-zfK" secondAttribute="trailing" id="Gsn-ec-4d9"/>
-                        <constraint firstAttribute="bottom" secondItem="05G-Eb-AGg" secondAttribute="bottom" id="Uue-Mn-7bR"/>
-                        <constraint firstItem="avj-iE-zfK" firstAttribute="leading" secondItem="pDN-PK-VcY" secondAttribute="leading" id="YcW-jp-heH"/>
-                        <constraint firstItem="05G-Eb-AGg" firstAttribute="leading" secondItem="pDN-PK-VcY" secondAttribute="leading" id="dU9-CP-oOh"/>
-                        <constraint firstAttribute="trailing" secondItem="05G-Eb-AGg" secondAttribute="trailing" id="efV-Os-MkR"/>
-                        <constraint firstItem="avj-iE-zfK" firstAttribute="top" secondItem="pDN-PK-VcY" secondAttribute="top" id="hQy-ud-FmT"/>
-                        <constraint firstAttribute="height" constant="40" id="i6X-xz-FUd"/>
+                        <constraint firstItem="avj-iE-zfK" firstAttribute="top" secondItem="pDN-PK-VcY" secondAttribute="top" id="5dX-BO-Q4U"/>
+                        <constraint firstAttribute="height" constant="50" id="AXP-Dg-VYP"/>
+                        <constraint firstAttribute="bottom" secondItem="05G-Eb-AGg" secondAttribute="bottom" id="Cxf-hQ-2CV"/>
+                        <constraint firstAttribute="trailing" secondItem="avj-iE-zfK" secondAttribute="trailing" id="Rmq-Gf-lEA"/>
+                        <constraint firstItem="avj-iE-zfK" firstAttribute="leading" secondItem="pDN-PK-VcY" secondAttribute="leading" id="ZDK-3L-lbP"/>
+                        <constraint firstItem="05G-Eb-AGg" firstAttribute="leading" secondItem="pDN-PK-VcY" secondAttribute="leading" id="Zcp-Gb-nNO"/>
+                        <constraint firstAttribute="trailing" secondItem="05G-Eb-AGg" secondAttribute="trailing" id="gcf-xi-N3f"/>
                     </constraints>
                     <connections>
                         <outletCollection property="gestureRecognizers" destination="ljZ-41-HlD" appends="YES" id="CQg-07-MXd"/>
                     </connections>
                 </view>
-                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="podcast" translatesAutoresizingMaskIntoConstraints="NO" id="EzM-t7-7BX" userLabel="BlurPodcastImage">
-                    <rect key="frame" x="0.0" y="40" width="600" height="400"/>
-                    <accessibility key="accessibilityConfiguration" identifier="podcastView"/>
-                    <gestureRecognizers/>
-                </imageView>
-                <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="podcast" translatesAutoresizingMaskIntoConstraints="NO" id="iVs-nU-5NJ" userLabel="podcastImage">
-                    <rect key="frame" x="175" y="72" width="250" height="250"/>
-                    <accessibility key="accessibilityConfiguration" identifier="podcastView"/>
-                    <gestureRecognizers/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="250" id="CoT-Vz-XgO"/>
-                        <constraint firstAttribute="height" constant="250" id="j3y-l4-24q"/>
-                    </constraints>
-                </imageView>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RV7-IA-m93" userLabel="BottomPlayerView">
-                    <rect key="frame" x="0.0" y="442" width="600" height="158"/>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RV7-IA-m93" userLabel="BottomView">
+                    <rect key="frame" x="0.0" y="380" width="600" height="220"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" distribution="equalSpacing" alignment="center" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="eP7-b1-CPp" userLabel="BottomStack">
-                            <rect key="frame" x="121" y="4" width="358" height="149"/>
+                            <rect key="frame" x="121" y="35" width="358" height="149"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="VMf-hf-h2H" userLabel="TrackNamesStack">
                                     <rect key="frame" x="0.0" y="0.0" width="358" height="38"/>
@@ -177,15 +160,30 @@
                     <accessibility key="accessibilityConfiguration" identifier="BottomPlayerView"/>
                     <gestureRecognizers/>
                 </view>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fbR-zK-GSd" userLabel="TopView">
+                    <rect key="frame" x="0.0" y="52" width="600" height="334"/>
+                    <subviews>
+                        <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="podcast3" translatesAutoresizingMaskIntoConstraints="NO" id="EzM-t7-7BX" userLabel="BlurPodcastImage">
+                            <rect key="frame" x="146" y="-1" width="309" height="309"/>
+                            <accessibility key="accessibilityConfiguration" identifier="podcastView"/>
+                            <gestureRecognizers/>
+                        </imageView>
+                        <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="podcast" translatesAutoresizingMaskIntoConstraints="NO" id="iVs-nU-5NJ" userLabel="podcastImage">
+                            <rect key="frame" x="175" y="30" width="250" height="250"/>
+                            <accessibility key="accessibilityConfiguration" identifier="podcastView"/>
+                            <gestureRecognizers/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
             </subviews>
+            <color key="backgroundColor" red="1" green="0.96696235730000002" blue="0.1125236828" alpha="1" colorSpace="calibratedRGB"/>
             <accessibility key="accessibilityConfiguration" identifier="MainViewView"/>
             <gestureRecognizers/>
             <constraints>
-                <constraint firstItem="pDN-PK-VcY" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Rbq-sT-8Qo"/>
-                <constraint firstItem="iVs-nU-5NJ" firstAttribute="centerX" secondItem="pDN-PK-VcY" secondAttribute="centerX" id="Sx6-3s-EuG"/>
-                <constraint firstAttribute="trailing" secondItem="pDN-PK-VcY" secondAttribute="trailing" id="U2Y-L7-trC"/>
-                <constraint firstItem="pDN-PK-VcY" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="mV7-R5-8sh"/>
-                <constraint firstItem="iVs-nU-5NJ" firstAttribute="top" secondItem="pDN-PK-VcY" secondAttribute="bottom" constant="32" id="rEb-hc-is2"/>
+                <constraint firstItem="pDN-PK-VcY" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="1nD-un-oh4"/>
+                <constraint firstItem="pDN-PK-VcY" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="7aw-zc-qcD"/>
+                <constraint firstAttribute="trailing" secondItem="pDN-PK-VcY" secondAttribute="trailing" id="tPB-C3-wp0"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -215,5 +213,6 @@
         <image name="Share_50" width="50" height="50"/>
         <image name="Shuffle Filled_50" width="50" height="50"/>
         <image name="podcast" width="600" height="600"/>
+        <image name="podcast3" width="200" height="200"/>
     </resources>
 </document>
