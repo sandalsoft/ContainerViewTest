@@ -58,7 +58,7 @@ class PlayerVC: UIViewController    {
   func showFullPlayer() {
     print("showFullPlayer")
     UIView.animateWithDuration(0.5) { () -> Void in
-      self.view.superview!.frame.origin.y = self.containerViewOrigin - self.view.frame.height
+      self.view.superview!.frame.origin.y = self.containerViewOrigin - (self.view.frame.height - 50)
       
       self.podcastImageView.alpha = 1
       self.tabBarController?.tabBar.alpha = 0

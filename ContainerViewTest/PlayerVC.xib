@@ -87,14 +87,28 @@
                         <outletCollection property="gestureRecognizers" destination="ljZ-41-HlD" appends="YES" id="CQg-07-MXd"/>
                     </connections>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RV7-IA-m93" userLabel="BottomPlayerView">
-                    <rect key="frame" x="0.0" y="465" width="600" height="135"/>
+                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="podcast" translatesAutoresizingMaskIntoConstraints="NO" id="EzM-t7-7BX" userLabel="BlurPodcastImage">
+                    <rect key="frame" x="0.0" y="40" width="600" height="400"/>
+                    <accessibility key="accessibilityConfiguration" identifier="podcastView"/>
+                    <gestureRecognizers/>
+                </imageView>
+                <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="podcast" translatesAutoresizingMaskIntoConstraints="NO" id="iVs-nU-5NJ" userLabel="podcastImage">
+                    <rect key="frame" x="175" y="72" width="250" height="250"/>
+                    <accessibility key="accessibilityConfiguration" identifier="podcastView"/>
+                    <gestureRecognizers/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="250" id="CoT-Vz-XgO"/>
+                        <constraint firstAttribute="height" constant="250" id="j3y-l4-24q"/>
+                    </constraints>
+                </imageView>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RV7-IA-m93" userLabel="BottomPlayerView">
+                    <rect key="frame" x="0.0" y="442" width="600" height="158"/>
                     <subviews>
-                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="eP7-b1-CPp">
-                            <rect key="frame" x="0.0" y="-1" width="600" height="136"/>
+                        <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" distribution="equalSpacing" alignment="center" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="eP7-b1-CPp" userLabel="BottomStack">
+                            <rect key="frame" x="121" y="4" width="358" height="149"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="VMf-hf-h2H" userLabel="TrackNamesStack">
-                                    <rect key="frame" x="121" y="0.0" width="358" height="38"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="358" height="38"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Epispde 153:  Federal Reserve Miscues on Stimulus" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gjb-ow-s2z">
                                             <rect key="frame" x="0.0" y="0.0" width="358" height="19"/>
@@ -110,11 +124,8 @@
                                         </label>
                                     </subviews>
                                 </stackView>
-                                <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.31240000000000001" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="9Pl-P8-nyH">
-                                    <rect key="frame" x="-2" y="47" width="604" height="31"/>
-                                </slider>
                                 <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="equalSpacing" spacing="75" translatesAutoresizingMaskIntoConstraints="NO" id="Ctd-02-krs" userLabel="MediaButtonStack">
-                                    <rect key="frame" x="150" y="86" width="300" height="50"/>
+                                    <rect key="frame" x="29" y="56" width="300" height="50"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fAg-kV-O2X" userLabel="rewButton">
                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -130,60 +141,51 @@
                                         </button>
                                     </subviews>
                                 </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="equalSpacing" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="HgG-yV-qQA" userLabel="MediaBottomStack">
+                                    <rect key="frame" x="101.5" y="124" width="155" height="25"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qeH-Ux-hbx">
+                                            <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="25" id="Ut0-AX-Qdo"/>
+                                                <constraint firstAttribute="width" constant="25" id="rXp-0P-zIG"/>
+                                            </constraints>
+                                            <state key="normal" image="Share_50"/>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4qj-TP-8bL">
+                                            <rect key="frame" x="65" y="0.0" width="25" height="25"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="25" id="HKb-aa-kJr"/>
+                                                <constraint firstAttribute="height" constant="25" id="ce5-25-1Sa"/>
+                                            </constraints>
+                                            <state key="normal" image="Shuffle Filled_50"/>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R68-Cq-9Qk">
+                                            <rect key="frame" x="130" y="0.0" width="25" height="25"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="25" id="RMS-75-jqU"/>
+                                                <constraint firstAttribute="width" constant="25" id="wcP-TF-ep8"/>
+                                            </constraints>
+                                            <state key="normal" image="Repeat Filled_50"/>
+                                        </button>
+                                    </subviews>
+                                </stackView>
                             </subviews>
-                            <constraints>
-                                <constraint firstItem="9Pl-P8-nyH" firstAttribute="leading" secondItem="eP7-b1-CPp" secondAttribute="leading" id="1DS-PV-U0b"/>
-                                <constraint firstAttribute="trailing" secondItem="9Pl-P8-nyH" secondAttribute="trailing" id="B3A-8p-xdB"/>
-                                <constraint firstItem="9Pl-P8-nyH" firstAttribute="centerX" secondItem="eP7-b1-CPp" secondAttribute="centerX" id="TXt-eL-pm6"/>
-                                <constraint firstAttribute="trailing" secondItem="9Pl-P8-nyH" secondAttribute="trailing" id="wAz-UE-IiC"/>
-                            </constraints>
                         </stackView>
                     </subviews>
                     <color key="backgroundColor" white="0.95697915240337983" alpha="1" colorSpace="calibratedWhite"/>
                     <accessibility key="accessibilityConfiguration" identifier="BottomPlayerView"/>
                     <gestureRecognizers/>
-                    <constraints>
-                        <constraint firstAttribute="bottom" secondItem="eP7-b1-CPp" secondAttribute="bottom" id="IiY-yA-YIr"/>
-                        <constraint firstItem="eP7-b1-CPp" firstAttribute="leading" secondItem="RV7-IA-m93" secondAttribute="leading" id="YWX-xk-pet"/>
-                        <constraint firstAttribute="trailing" secondItem="eP7-b1-CPp" secondAttribute="trailing" id="yHk-Jb-OpK"/>
-                    </constraints>
                 </view>
-                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="podcast" translatesAutoresizingMaskIntoConstraints="NO" id="EzM-t7-7BX" userLabel="BlurPodcastImage">
-                    <rect key="frame" x="0.0" y="40" width="600" height="426"/>
-                    <accessibility key="accessibilityConfiguration" identifier="podcastView"/>
-                    <gestureRecognizers/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="426" id="FUR-HI-cqL"/>
-                    </constraints>
-                </imageView>
-                <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="podcast" translatesAutoresizingMaskIntoConstraints="NO" id="iVs-nU-5NJ" userLabel="podcastImage">
-                    <rect key="frame" x="175" y="121" width="250" height="250"/>
-                    <accessibility key="accessibilityConfiguration" identifier="podcastView"/>
-                    <gestureRecognizers/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="250" id="Lpy-el-T6J"/>
-                        <constraint firstAttribute="width" constant="250" id="aDQ-rt-Dkx"/>
-                    </constraints>
-                </imageView>
             </subviews>
             <accessibility key="accessibilityConfiguration" identifier="MainViewView"/>
             <gestureRecognizers/>
             <constraints>
-                <constraint firstItem="EzM-t7-7BX" firstAttribute="top" secondItem="pDN-PK-VcY" secondAttribute="bottom" id="2W2-ez-a5l"/>
-                <constraint firstItem="RV7-IA-m93" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="HS4-pj-PgJ"/>
-                <constraint firstAttribute="trailing" secondItem="RV7-IA-m93" secondAttribute="trailing" id="HgI-bP-mfZ"/>
-                <constraint firstItem="RV7-IA-m93" firstAttribute="top" secondItem="iVs-nU-5NJ" secondAttribute="bottom" constant="94" id="JTa-sJ-eg1"/>
-                <constraint firstAttribute="bottom" secondItem="RV7-IA-m93" secondAttribute="bottom" id="Nfb-Ts-102"/>
-                <constraint firstItem="iVs-nU-5NJ" firstAttribute="centerX" secondItem="pDN-PK-VcY" secondAttribute="centerX" id="OpP-Kl-ymd"/>
-                <constraint firstAttribute="bottom" secondItem="RV7-IA-m93" secondAttribute="bottom" id="RPc-b4-bc1"/>
                 <constraint firstItem="pDN-PK-VcY" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Rbq-sT-8Qo"/>
+                <constraint firstItem="iVs-nU-5NJ" firstAttribute="centerX" secondItem="pDN-PK-VcY" secondAttribute="centerX" id="Sx6-3s-EuG"/>
                 <constraint firstAttribute="trailing" secondItem="pDN-PK-VcY" secondAttribute="trailing" id="U2Y-L7-trC"/>
-                <constraint firstItem="EzM-t7-7BX" firstAttribute="leading" secondItem="RV7-IA-m93" secondAttribute="leading" id="alN-sT-e7X"/>
-                <constraint firstItem="EzM-t7-7BX" firstAttribute="leading" secondItem="pDN-PK-VcY" secondAttribute="leading" id="anE-bQ-jMD"/>
-                <constraint firstItem="RV7-IA-m93" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="fQX-F4-KhP"/>
-                <constraint firstItem="EzM-t7-7BX" firstAttribute="trailing" secondItem="RV7-IA-m93" secondAttribute="trailing" id="ff4-q5-SjW"/>
-                <constraint firstItem="iVs-nU-5NJ" firstAttribute="top" secondItem="pDN-PK-VcY" secondAttribute="bottom" constant="81" id="hff-Y1-gs6"/>
                 <constraint firstItem="pDN-PK-VcY" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="mV7-R5-8sh"/>
+                <constraint firstItem="iVs-nU-5NJ" firstAttribute="top" secondItem="pDN-PK-VcY" secondAttribute="bottom" constant="32" id="rEb-hc-is2"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -208,7 +210,10 @@
         <image name="Fast Forward Filled_50" width="50" height="50"/>
         <image name="Play Filled" width="32" height="32"/>
         <image name="Play Filled_50" width="50" height="50"/>
+        <image name="Repeat Filled_50" width="50" height="50"/>
         <image name="Rewind Filled_50" width="50" height="50"/>
+        <image name="Share_50" width="50" height="50"/>
+        <image name="Shuffle Filled_50" width="50" height="50"/>
         <image name="podcast" width="600" height="600"/>
     </resources>
 </document>
