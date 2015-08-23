@@ -12,23 +12,25 @@ let tabBarOffset: CGFloat = 5.0
 
 class PlayerVC: UIViewController    {
   
-  var topOfFrame: CGFloat = 0.0
-  var containerViewTop: CGFloat = 0.0
-  
-  
   @IBOutlet weak var topPlayerView: UIView!
   @IBOutlet weak var podcastImageView: UIImageView!
   
+  @IBOutlet weak var blurPodcastImage: UIImageView!
   var tapGesture: UITapGestureRecognizer?
+  
+  var containerViewOrigin: CGFloat = 0.0
+  
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    topOfFrame = -(self.view.frame.height - 65) // -671.0 on 6+
+    
+    blurImageView(blurPodcastImage)
+
   }
   
   override func viewDidAppear(animated: Bool) {
-    containerViewTop = (self.view.superview?.frame.origin.y)!
-    print("containerViewTop: \(containerViewTop)")
+    containerViewOrigin = (self.view.superview?.frame.origin.y)!
+    print("containerViewOrigin: \(containerViewOrigin)")
 
   }
   
@@ -46,6 +48,7 @@ class PlayerVC: UIViewController    {
         resetMiniPlayer()
       }//if
     } else {
+      // finger is dragging views
       self.view.superview!.frame.origin.y = self.view.superview!.frame.origin.y + translation.y
       gesture.setTranslation(CGPointZero, inView: self.view.superview)
     }//if state
@@ -55,7 +58,7 @@ class PlayerVC: UIViewController    {
   func showFullPlayer() {
     print("showFullPlayer")
     UIView.animateWithDuration(0.5) { () -> Void in
-      self.view.superview!.frame.origin.y = self.containerViewTop - self.view.frame.height
+      self.view.superview!.frame.origin.y = self.containerViewOrigin - self.view.frame.height
       
       self.podcastImageView.alpha = 1
       self.tabBarController?.tabBar.alpha = 0
@@ -80,6 +83,8 @@ class PlayerVC: UIViewController    {
         showFullPlayer()
       }//if
     }//if state
+    
+    // finger is dragging views
     self.view.superview!.frame.origin.y = self.view.superview!.frame.origin.y + translation.y
     gesture.setTranslation(CGPointZero, inView: self.view.superview)
   }//func
@@ -88,7 +93,7 @@ class PlayerVC: UIViewController    {
     print("resetting miniplayer")
     UIView.animateWithDuration(0.25) { () -> Void in
 
-      self.view.superview?.frame.origin.y = self.containerViewTop
+      self.view.superview?.frame.origin.y = self.containerViewOrigin
       self.podcastImageView.alpha = 0.0
       self.tabBarController?.tabBar.alpha = 1.0
       self.topPlayerView?.alpha = 1.0
@@ -97,6 +102,22 @@ class PlayerVC: UIViewController    {
   }
 
 
+  func blurImageView(imageView: UIImageView) {
+    if !UIAccessibilityIsReduceTransparencyEnabled() {
+      imageView.backgroundColor = UIColor.clearColor()
+      
+      let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.Dark)
+      let blurEffectView = UIVisualEffectView(effect: blurEffect)
+      //always fill the view
+      blurEffectView.frame = imageView.bounds
+      blurEffectView.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
+      
+      imageView.addSubview(blurEffectView) //if you have more UIViews, use an insertSubview API to place it where needed
+    }
+    else {
+      imageView.backgroundColor = UIColor.blackColor()
+    }
+  }
   
 
 }

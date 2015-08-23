@@ -12,7 +12,7 @@ class PlaylistViewController: UIViewController {
 
   @IBOutlet weak var containerView: UIView!
     override func viewDidLoad() {
-        super.viewDidLoad()
+      super.viewDidLoad()
 
       let containerViewOffset: CGFloat = -89.0
       self.view.addConstraint(NSLayoutConstraint(item: containerView,
@@ -22,23 +22,11 @@ class PlaylistViewController: UIViewController {
         attribute: NSLayoutAttribute.Bottom,
         multiplier: 1.0, constant: containerViewOffset))
     
-//      self.view.layoutIfNeeded()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+  
 }

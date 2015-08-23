@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PlayerVC" customModule="ContainerViewTest" customModuleProvider="target">
             <connections>
+                <outlet property="blurPodcastImage" destination="EzM-t7-7BX" id="QHN-2w-up0"/>
                 <outlet property="podcastImageView" destination="iVs-nU-5NJ" id="q8d-lO-rjH"/>
                 <outlet property="topPlayerView" destination="pDN-PK-VcY" id="sjF-fK-JVG"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -90,6 +91,11 @@
                     <accessibility key="accessibilityConfiguration" identifier="BottomPlayerView"/>
                     <gestureRecognizers/>
                 </view>
+                <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="podcast" translatesAutoresizingMaskIntoConstraints="NO" id="EzM-t7-7BX" userLabel="BlurPodcastImage">
+                    <rect key="frame" x="0.0" y="40" width="600" height="560"/>
+                    <accessibility key="accessibilityConfiguration" identifier="podcastView"/>
+                    <gestureRecognizers/>
+                </imageView>
                 <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="podcast" translatesAutoresizingMaskIntoConstraints="NO" id="iVs-nU-5NJ" userLabel="podcastImage">
                     <rect key="frame" x="175" y="175" width="250" height="250"/>
                     <accessibility key="accessibilityConfiguration" identifier="podcastView"/>
@@ -103,14 +109,18 @@
             <accessibility key="accessibilityConfiguration" identifier="MainViewView"/>
             <gestureRecognizers/>
             <constraints>
+                <constraint firstAttribute="bottom" secondItem="EzM-t7-7BX" secondAttribute="bottom" id="9YM-fG-pgQ"/>
                 <constraint firstItem="RV7-IA-m93" firstAttribute="leading" secondItem="pDN-PK-VcY" secondAttribute="leading" id="Gfi-84-BGe"/>
+                <constraint firstItem="EzM-t7-7BX" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="NlB-gh-7wP"/>
                 <constraint firstItem="iVs-nU-5NJ" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="RX4-Ag-Sf9"/>
                 <constraint firstItem="pDN-PK-VcY" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Rbq-sT-8Qo"/>
                 <constraint firstAttribute="trailing" secondItem="pDN-PK-VcY" secondAttribute="trailing" id="U2Y-L7-trC"/>
                 <constraint firstAttribute="bottom" secondItem="RV7-IA-m93" secondAttribute="bottom" id="dT5-M2-Hbj"/>
                 <constraint firstItem="RV7-IA-m93" firstAttribute="top" secondItem="iVs-nU-5NJ" secondAttribute="bottom" constant="90" id="gcO-MN-zVd"/>
                 <constraint firstItem="iVs-nU-5NJ" firstAttribute="centerX" secondItem="pDN-PK-VcY" secondAttribute="centerX" id="hTb-7A-oHw"/>
+                <constraint firstItem="EzM-t7-7BX" firstAttribute="top" secondItem="pDN-PK-VcY" secondAttribute="bottom" id="iTU-5d-hmi"/>
                 <constraint firstItem="RV7-IA-m93" firstAttribute="trailing" secondItem="pDN-PK-VcY" secondAttribute="trailing" id="jyL-XK-7EB"/>
+                <constraint firstAttribute="trailing" secondItem="EzM-t7-7BX" secondAttribute="trailing" id="k8r-B4-hdr"/>
                 <constraint firstItem="pDN-PK-VcY" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="mV7-R5-8sh"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
@@ -125,13 +135,11 @@
                 <action selector="showFullPlayerPanGesture:" destination="-1" id="UOe-3A-lUh"/>
             </connections>
         </panGestureRecognizer>
-
         <panGestureRecognizer minimumNumberOfTouches="1" id="gNT-vz-lXy" userLabel="Hide player Pan Gesture">
             <connections>
                 <action selector="hidFullPlayerGesture:" destination="-1" id="NPf-1M-m3t"/>
             </connections>
         </panGestureRecognizer>
-
     </objects>
     <resources>
         <image name="Collapse Arrow" width="32" height="32"/>
