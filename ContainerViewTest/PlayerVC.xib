@@ -7,6 +7,8 @@
         <mutableArray key="HelveticaNeueLights.ttc">
             <string>HelveticaNeue-LightItalic</string>
             <string>HelveticaNeue-Light</string>
+            <string>HelveticaNeue-Light</string>
+            <string>HelveticaNeue-LightItalic</string>
         </mutableArray>
     </customFonts>
     <objects>
@@ -86,41 +88,81 @@
                     </connections>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RV7-IA-m93" userLabel="BottomPlayerView">
-                    <rect key="frame" x="0.0" y="515" width="600" height="85"/>
+                    <rect key="frame" x="0.0" y="465" width="600" height="135"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="VMf-hf-h2H" userLabel="TrackNamesStack">
+                            <rect key="frame" x="121" y="31" width="358" height="38"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Epispde 153:  Federal Reserve Miscues on Stimulus" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gjb-ow-s2z">
+                                    <rect key="frame" x="0.0" y="0.0" width="358" height="19"/>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-LightItalic" family="Helvetica Neue" pointSize="16"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Econtalk" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3SN-Qc-nD2">
+                                    <rect key="frame" x="0.0" y="19" width="358" height="19"/>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                        <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Vy3-Va-aQq">
+                            <rect key="frame" x="61" y="1" width="479" height="31"/>
+                        </slider>
+                        <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ctd-02-krs" userLabel="MediaButtonStack">
+                            <rect key="frame" x="231" y="77" width="138" height="30"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fAg-kV-O2X">
+                                    <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
+                                    <state key="normal" title="Button"/>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZTZ-Xq-P6o">
+                                    <rect key="frame" x="46" y="0.0" width="46" height="30"/>
+                                    <state key="normal" title="Button"/>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RBW-6U-4FQ">
+                                    <rect key="frame" x="92" y="0.0" width="46" height="30"/>
+                                    <state key="normal" title="Button"/>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     <accessibility key="accessibilityConfiguration" identifier="BottomPlayerView"/>
                     <gestureRecognizers/>
                 </view>
-                <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="podcast" translatesAutoresizingMaskIntoConstraints="NO" id="EzM-t7-7BX" userLabel="BlurPodcastImage">
-                    <rect key="frame" x="0.0" y="40" width="600" height="560"/>
-                    <accessibility key="accessibilityConfiguration" identifier="podcastView"/>
-                    <gestureRecognizers/>
-                </imageView>
-                <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="podcast" translatesAutoresizingMaskIntoConstraints="NO" id="iVs-nU-5NJ" userLabel="podcastImage">
-                    <rect key="frame" x="175" y="175" width="250" height="250"/>
+                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="podcast" translatesAutoresizingMaskIntoConstraints="NO" id="EzM-t7-7BX" userLabel="BlurPodcastImage">
+                    <rect key="frame" x="0.0" y="40" width="600" height="426"/>
                     <accessibility key="accessibilityConfiguration" identifier="podcastView"/>
                     <gestureRecognizers/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="250" id="Wdu-4n-7zq"/>
-                        <constraint firstAttribute="width" constant="250" id="viW-hH-rgZ"/>
+                        <constraint firstAttribute="height" constant="426" id="FUR-HI-cqL"/>
+                    </constraints>
+                </imageView>
+                <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="podcast" translatesAutoresizingMaskIntoConstraints="NO" id="iVs-nU-5NJ" userLabel="podcastImage">
+                    <rect key="frame" x="175" y="121" width="250" height="250"/>
+                    <accessibility key="accessibilityConfiguration" identifier="podcastView"/>
+                    <gestureRecognizers/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="250" id="Lpy-el-T6J"/>
+                        <constraint firstAttribute="width" constant="250" id="aDQ-rt-Dkx"/>
                     </constraints>
                 </imageView>
             </subviews>
             <accessibility key="accessibilityConfiguration" identifier="MainViewView"/>
             <gestureRecognizers/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="EzM-t7-7BX" secondAttribute="bottom" id="9YM-fG-pgQ"/>
-                <constraint firstItem="RV7-IA-m93" firstAttribute="leading" secondItem="pDN-PK-VcY" secondAttribute="leading" id="Gfi-84-BGe"/>
-                <constraint firstItem="EzM-t7-7BX" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="NlB-gh-7wP"/>
-                <constraint firstItem="iVs-nU-5NJ" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="RX4-Ag-Sf9"/>
+                <constraint firstItem="EzM-t7-7BX" firstAttribute="top" secondItem="pDN-PK-VcY" secondAttribute="bottom" id="2W2-ez-a5l"/>
+                <constraint firstItem="RV7-IA-m93" firstAttribute="top" secondItem="iVs-nU-5NJ" secondAttribute="bottom" constant="94" id="JTa-sJ-eg1"/>
+                <constraint firstAttribute="bottom" secondItem="RV7-IA-m93" secondAttribute="bottom" id="Nfb-Ts-102"/>
+                <constraint firstItem="iVs-nU-5NJ" firstAttribute="centerX" secondItem="pDN-PK-VcY" secondAttribute="centerX" id="OpP-Kl-ymd"/>
                 <constraint firstItem="pDN-PK-VcY" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Rbq-sT-8Qo"/>
                 <constraint firstAttribute="trailing" secondItem="pDN-PK-VcY" secondAttribute="trailing" id="U2Y-L7-trC"/>
-                <constraint firstAttribute="bottom" secondItem="RV7-IA-m93" secondAttribute="bottom" id="dT5-M2-Hbj"/>
-                <constraint firstItem="RV7-IA-m93" firstAttribute="top" secondItem="iVs-nU-5NJ" secondAttribute="bottom" constant="90" id="gcO-MN-zVd"/>
-                <constraint firstItem="iVs-nU-5NJ" firstAttribute="centerX" secondItem="pDN-PK-VcY" secondAttribute="centerX" id="hTb-7A-oHw"/>
-                <constraint firstItem="EzM-t7-7BX" firstAttribute="top" secondItem="pDN-PK-VcY" secondAttribute="bottom" id="iTU-5d-hmi"/>
-                <constraint firstItem="RV7-IA-m93" firstAttribute="trailing" secondItem="pDN-PK-VcY" secondAttribute="trailing" id="jyL-XK-7EB"/>
-                <constraint firstAttribute="trailing" secondItem="EzM-t7-7BX" secondAttribute="trailing" id="k8r-B4-hdr"/>
+                <constraint firstItem="EzM-t7-7BX" firstAttribute="leading" secondItem="RV7-IA-m93" secondAttribute="leading" id="alN-sT-e7X"/>
+                <constraint firstItem="EzM-t7-7BX" firstAttribute="leading" secondItem="pDN-PK-VcY" secondAttribute="leading" id="anE-bQ-jMD"/>
+                <constraint firstItem="EzM-t7-7BX" firstAttribute="trailing" secondItem="RV7-IA-m93" secondAttribute="trailing" id="ff4-q5-SjW"/>
+                <constraint firstItem="iVs-nU-5NJ" firstAttribute="top" secondItem="pDN-PK-VcY" secondAttribute="bottom" constant="81" id="hff-Y1-gs6"/>
                 <constraint firstItem="pDN-PK-VcY" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="mV7-R5-8sh"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
